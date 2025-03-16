@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1739693230.793216079, "rt":1.53, "ut":0.56, "st":0.23}}
+{"vcselab":{"timestamp_begin":1739693232.430547689, "rt":0.98, "ut":0.34, "st":0.06}}
+{"link":{"timestamp_begin":1739693233.503555206, "rt":0.62, "ut":0.33, "st":0.21}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1739693230.097096088}
+{"VCS_COMP_START_TIME": 1739693230.097096088}
+{"VCS_COMP_END_TIME": 1739693236.010987522}
+{"VCS_USER_OPTIONS": "-R +v2k -full64 testfixture_a.v ../syn/netlist/CLE_syn.v -v /home/m107/m107061543/icc/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v +define+SDF -debug_acc +neg_tchk"}
+{"vcs1": {"peak_mem": 349780}}
+{"stitch_vcselab": {"peak_mem": 222240}}

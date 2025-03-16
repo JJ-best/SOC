@@ -1,0 +1,52 @@
+ 
+****************************************
+check_design summary:
+Version:     R-2020.09-SP5
+Date:        Sun Mar 16 23:53:54 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     26
+    Shorted outputs (LINT-31)                                      15
+    Constant outputs (LINT-52)                                     11
+
+Cells                                                               8
+    Cells do not drive (LINT-1)                                     8
+--------------------------------------------------------------------------------
+
+Warning: In design 'fir', cell 'B_78' does not drive any nets. (LINT-1)
+Warning: In design 'fir', cell 'B_79' does not drive any nets. (LINT-1)
+Warning: In design 'fir', cell 'B_81' does not drive any nets. (LINT-1)
+Warning: In design 'fir', cell 'B_82' does not drive any nets. (LINT-1)
+Warning: In design 'fir', cell 'B_83' does not drive any nets. (LINT-1)
+Warning: In design 'fir', cell 'B_84' does not drive any nets. (LINT-1)
+Warning: In design 'fir', cell 'B_86' does not drive any nets. (LINT-1)
+Warning: In design 'fir', cell 'B_87' does not drive any nets. (LINT-1)
+Warning: In design 'fir', output port 'tap_WE[3]' is connected directly to output port 'tap_WE[0]'. (LINT-31)
+Warning: In design 'fir', output port 'tap_WE[3]' is connected directly to output port 'tap_WE[1]'. (LINT-31)
+Warning: In design 'fir', output port 'tap_WE[3]' is connected directly to output port 'tap_WE[2]'. (LINT-31)
+Warning: In design 'fir', output port 'tap_A[11]' is connected directly to output port 'data_A[7]'. (LINT-31)
+Warning: In design 'fir', output port 'tap_A[11]' is connected directly to output port 'data_A[8]'. (LINT-31)
+Warning: In design 'fir', output port 'tap_A[11]' is connected directly to output port 'data_A[9]'. (LINT-31)
+Warning: In design 'fir', output port 'tap_A[11]' is connected directly to output port 'data_A[10]'. (LINT-31)
+Warning: In design 'fir', output port 'tap_A[11]' is connected directly to output port 'data_A[11]'. (LINT-31)
+Warning: In design 'fir', output port 'tap_A[11]' is connected directly to output port 'tap_A[7]'. (LINT-31)
+Warning: In design 'fir', output port 'tap_A[11]' is connected directly to output port 'tap_A[8]'. (LINT-31)
+Warning: In design 'fir', output port 'tap_A[11]' is connected directly to output port 'tap_A[9]'. (LINT-31)
+Warning: In design 'fir', output port 'tap_A[11]' is connected directly to output port 'tap_A[10]'. (LINT-31)
+Warning: In design 'fir', output port 'data_WE[3]' is connected directly to output port 'data_WE[0]'. (LINT-31)
+Warning: In design 'fir', output port 'data_WE[3]' is connected directly to output port 'data_WE[1]'. (LINT-31)
+Warning: In design 'fir', output port 'data_WE[3]' is connected directly to output port 'data_WE[2]'. (LINT-31)
+Warning: In design 'fir', output port 'tap_A[11]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'fir', output port 'tap_A[10]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'fir', output port 'tap_A[9]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'fir', output port 'tap_A[8]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'fir', output port 'tap_A[7]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'fir', output port 'data_EN' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'fir', output port 'data_A[11]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'fir', output port 'data_A[10]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'fir', output port 'data_A[9]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'fir', output port 'data_A[8]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'fir', output port 'data_A[7]' is connected directly to 'logic 0'. (LINT-52)
+1

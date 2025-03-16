@@ -1,0 +1,157 @@
+{
+    "PEModules": [],
+    "MlibObjs": {},
+    "CompileStatus": "Successful",
+    "PrevCompiledModules": {
+        "fir_tb": {
+            "aMFWh_d": {
+                "mode": 4,
+                "out": "aMFWh_d.o",
+                "bytes": 108412,
+                "mod": "fir_tb",
+                "checksum": 0,
+                "archive": "archive.54/_27605_archive_1.a"
+            }
+        },
+        "udp_tlat": {
+            "udp_tlat": {
+                "mode": 4,
+                "out": "objs/udps/gSqMj.o",
+                "bytes": 0,
+                "mod": "udp_tlat"
+            }
+        },
+        "bram32": {
+            "JDmIf_d": {
+                "mode": 4,
+                "out": "JDmIf_d.o",
+                "bytes": 11648,
+                "mod": "bram32",
+                "checksum": 0,
+                "archive": "archive.54/_27605_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "out": "objs/amcQw_d.o",
+                "mode": 4,
+                "bytes": 7387,
+                "mod": "...MASTER...",
+                "checksum": 0
+            }
+        },
+        "udp_dff": {
+            "udp_dff": {
+                "mode": 4,
+                "out": "objs/udps/exIG1.o",
+                "bytes": 0,
+                "mod": "udp_dff"
+            }
+        },
+        "udp_mux2": {
+            "udp_mux2": {
+                "mode": 4,
+                "out": "objs/udps/U7Vwg.o",
+                "bytes": 0,
+                "mod": "udp_mux2"
+            }
+        }
+    },
+    "NameTable": {
+        "fir_tb": [
+            "fir_tb",
+            "aMFWh",
+            "module",
+            1
+        ],
+        "bram32": [
+            "bram32",
+            "JDmIf",
+            "module",
+            2
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module",
+            3
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "stat": {
+        "outputSizePerQuad": 54.247084952803995,
+        "quadSpeed": 30871.815969008192,
+        "ru_self_cgstart": {
+            "ru_minflt": 23954,
+            "ru_utime_sec": 0.20411000000000001,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.093423000000000006,
+            "ru_nivcsw": 61,
+            "ru_maxrss_kb": 70268,
+            "ru_nvcsw": 318
+        },
+        "mopSpeed": 77850.914783960136,
+        "ru_childs_cgstart": {
+            "ru_minflt": 10231,
+            "ru_utime_sec": 0.033808999999999999,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.086463999999999999,
+            "ru_nivcsw": 36,
+            "ru_maxrss_kb": 21844,
+            "ru_nvcsw": 102
+        },
+        "nMops": 13625,
+        "mop/quad": 2.5217471774939848,
+        "nQuads": 5403,
+        "peak_mem_kb": 244060,
+        "totalObjSize": 293097,
+        "ru_self_end": {
+            "ru_minflt": 28291,
+            "ru_utime_sec": 0.37912400000000002,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.115647,
+            "ru_nivcsw": 79,
+            "ru_maxrss_kb": 82928,
+            "ru_nvcsw": 444
+        },
+        "ru_childs_end": {
+            "ru_minflt": 10806,
+            "ru_utime_sec": 0.034691,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.094405000000000003,
+            "ru_nivcsw": 38,
+            "ru_maxrss_kb": 22212,
+            "ru_nvcsw": 107
+        },
+        "Frontend(%)": 53.837266962787901,
+        "CodeGen(%)": 46.162733037212099
+    },
+    "CurCompileUdps": {},
+    "CurCompileModules": [
+        "...MASTER...",
+        "fir_tb",
+        "fir_tb",
+        "bram32",
+        "bram32"
+    ],
+    "LVLData": [
+        "SIM"
+    ],
+    "SIMBData": {
+        "bytes": 115809,
+        "out": "amcQwB.o",
+        "archive": "archive.54/_27605_archive_1.a"
+    },
+    "CompileProcesses": [
+        "cgproc.27605.json"
+    ],
+    "Misc": {
+        "default_output_dir": "csrc",
+        "cwd": "/home/u110/u110022124/SOC/labfir_v9/sim",
+        "csrc": "csrc",
+        "daidir_abs": "/home/u110/u110022124/SOC/labfir_v9/sim/simv.daidir",
+        "csrc_abs": "/home/u110/u110022124/SOC/labfir_v9/sim/csrc",
+        "archive_dir": "archive.54",
+        "daidir": "simv.daidir"
+    }
+}
