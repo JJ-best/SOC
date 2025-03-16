@@ -1,0 +1,2010 @@
+{
+    "stat": {
+        "ru_self_end": {
+            "ru_majflt": 75,
+            "ru_minflt": 32686,
+            "ru_maxrss_kb": 80748,
+            "ru_utime_sec": 0.843055,
+            "ru_nivcsw": 543,
+            "ru_stime_sec": 0.14185,
+            "ru_nvcsw": 728
+        },
+        "ru_childs_end": {
+            "ru_majflt": 0,
+            "ru_minflt": 10806,
+            "ru_maxrss_kb": 21924,
+            "ru_utime_sec": 0.026790000000000001,
+            "ru_nivcsw": 44,
+            "ru_stime_sec": 0.070972999999999994,
+            "ru_nvcsw": 123
+        },
+        "peak_mem_kb": 248152
+    },
+    "CompUnits": {
+        "GYQvg_d": {
+            "bytes": 8145,
+            "mod": "OAI221XL",
+            "out": "GYQvg_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "f8nqa_d": {
+            "bytes": 11688,
+            "mod": "CMPR42X1",
+            "out": "f8nqa_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "BUsfE_d": {
+            "bytes": 8072,
+            "mod": "AOI221XL",
+            "out": "BUsfE_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "aMFWh_d": {
+            "bytes": 108412,
+            "mod": "fir_tb",
+            "out": "aMFWh_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "SiAYE_d": {
+            "bytes": 7415,
+            "mod": "AOI21BXL",
+            "out": "SiAYE_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "y5jFc_d": {
+            "bytes": 7521,
+            "mod": "AOI31XL",
+            "out": "y5jFc_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "ujt4N_d": {
+            "bytes": 305415,
+            "mod": "fir",
+            "out": "ujt4N_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "xAVMd_d": {
+            "bytes": 6718,
+            "mod": "ADDHXL",
+            "out": "xAVMd_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "JDmIf_d": {
+            "bytes": 11648,
+            "mod": "bram32",
+            "out": "JDmIf_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "pCvbK_d": {
+            "bytes": 8824,
+            "mod": "DFFSRXL",
+            "out": "pCvbK_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "yKCjh_d": {
+            "bytes": 8605,
+            "mod": "OAI222XL",
+            "out": "yKCjh_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "D1wVr_d": {
+            "bytes": 8909,
+            "mod": "ADDFXL",
+            "out": "D1wVr_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "Wk0jI_d": {
+            "bytes": 7644,
+            "mod": "AOI211XL",
+            "out": "Wk0jI_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "FW8wG_d": {
+            "bytes": 7103,
+            "mod": "AND3XL",
+            "out": "FW8wG_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "Ljmab_d": {
+            "bytes": 6529,
+            "mod": "OR2XL",
+            "out": "Ljmab_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "LYkvL_d": {
+            "bytes": 7382,
+            "mod": "AO21XL",
+            "out": "LYkvL_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "Hevxk_d": {
+            "bytes": 7412,
+            "mod": "OAI2BB1XL",
+            "out": "Hevxk_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "f9N6m_d": {
+            "bytes": 7472,
+            "mod": "OAI2B1XL",
+            "out": "f9N6m_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "kQMYW_d": {
+            "bytes": 6530,
+            "mod": "NOR2BXL",
+            "out": "kQMYW_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "t0Hd0_d": {
+            "bytes": 7802,
+            "mod": "AO22XL",
+            "out": "t0Hd0_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "DF2I0_d": {
+            "bytes": 7098,
+            "mod": "OR3XL",
+            "out": "DF2I0_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "eQUpD_d": {
+            "bytes": 7802,
+            "mod": "AO2B2XL",
+            "out": "eQUpD_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "RctLc_d": {
+            "bytes": 8141,
+            "mod": "AOI32XL",
+            "out": "RctLc_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "FsUsG_d": {
+            "bytes": 6045,
+            "mod": "INVXL",
+            "out": "FsUsG_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "G6ems_d": {
+            "bytes": 8508,
+            "mod": "AOI222XL",
+            "out": "G6ems_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "t8sfL_d": {
+            "bytes": 7383,
+            "mod": "AOI21XL",
+            "out": "t8sfL_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "Kx8dR_d": {
+            "bytes": 7803,
+            "mod": "AOI22XL",
+            "out": "Kx8dR_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "nqk2t_d": {
+            "bytes": 7440,
+            "mod": "OAI21XL",
+            "out": "nqk2t_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "TaEc5_d": {
+            "bytes": 7415,
+            "mod": "AOI2B1XL",
+            "out": "TaEc5_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "Imu1K_d": {
+            "bytes": 7920,
+            "mod": "OAI2B2XL",
+            "out": "Imu1K_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "uZF5n_d": {
+            "bytes": 7411,
+            "mod": "AOI2BB1XL",
+            "out": "uZF5n_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "m7gfL_d": {
+            "bytes": 7831,
+            "mod": "AOI2BB2XL",
+            "out": "m7gfL_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "RchZy_d": {
+            "bytes": 7689,
+            "mod": "OAI2B11XL",
+            "out": "RchZy_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "Dps8g_d": {
+            "bytes": 6509,
+            "mod": "CLKAND2X2",
+            "out": "Dps8g_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "D0Gi6_d": {
+            "bytes": 8576,
+            "mod": "DFFRXL",
+            "out": "D0Gi6_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "C4bJV_d": {
+            "bytes": 6531,
+            "mod": "NAND2XL",
+            "out": "C4bJV_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "bF9Ux_d": {
+            "bytes": 6077,
+            "mod": "CLKBUFX2",
+            "out": "bF9Ux_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "N95Kp_d": {
+            "bytes": 8576,
+            "mod": "DFFRQXL",
+            "out": "N95Kp_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "L17Lj_d": {
+            "bytes": 8576,
+            "mod": "DFFSQXL",
+            "out": "L17Lj_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "Jacfd_d": {
+            "bytes": 7279,
+            "mod": "MXI2XL",
+            "out": "Jacfd_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "eKshN_d": {
+            "bytes": 7888,
+            "mod": "OAI2BB2XL",
+            "out": "eKshN_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "B7bZD_d": {
+            "bytes": 6563,
+            "mod": "NAND2BXL",
+            "out": "B7bZD_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "zJkFY_d": {
+            "bytes": 7100,
+            "mod": "NAND3XL",
+            "out": "zJkFY_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "YFzvB_d": {
+            "bytes": 7132,
+            "mod": "NAND3BXL",
+            "out": "YFzvB_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "RaaAR_d": {
+            "bytes": 7328,
+            "mod": "NAND4XL",
+            "out": "RaaAR_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "Nnn6h_d": {
+            "bytes": 7103,
+            "mod": "XOR3XL",
+            "out": "Nnn6h_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "QZEIi_d": {
+            "bytes": 6530,
+            "mod": "XOR2XL",
+            "out": "QZEIi_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "APaqQ_d": {
+            "bytes": 7360,
+            "mod": "NAND4BXL",
+            "out": "APaqQ_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "UiF6Q_d": {
+            "bytes": 6530,
+            "mod": "NOR2XL",
+            "out": "UiF6Q_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "jIuBP_d": {
+            "bytes": 7517,
+            "mod": "OAI31XL",
+            "out": "jIuBP_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "qsiak_d": {
+            "bytes": 7103,
+            "mod": "NOR3XL",
+            "out": "qsiak_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "yEYNK_d": {
+            "bytes": 7103,
+            "mod": "NOR3BXL",
+            "out": "yEYNK_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "z4Vhc_d": {
+            "bytes": 7888,
+            "mod": "OAI22XL",
+            "out": "z4Vhc_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "Bxps4_d": {
+            "bytes": 7327,
+            "mod": "NOR4XL",
+            "out": "Bxps4_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "nYeNM_d": {
+            "bytes": 7374,
+            "mod": "OA21XL",
+            "out": "nYeNM_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "i85VS_d": {
+            "bytes": 7693,
+            "mod": "OAI211XL",
+            "out": "i85VS_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "A3I3t_d": {
+            "bytes": 8193,
+            "mod": "OAI32XL",
+            "out": "A3I3t_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "kHJ20_d": {
+            "bytes": 7334,
+            "mod": "OR4XL",
+            "out": "kHJ20_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        },
+        "rpKsx_d": {
+            "bytes": 6531,
+            "mod": "XNOR2XL",
+            "out": "rpKsx_d.o",
+            "mode": 4,
+            "archive": "archive.59/_15226_archive_1.a",
+            "checksum": 0
+        }
+    },
+    "Modules": {
+        "AOI222XL": {
+            "start_perf": [
+                2.4658679962158203,
+                0.72116400000000003,
+                0.112745,
+                242616,
+                248152,
+                1742147736.640126
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4707999229431152,
+                0.72548199999999996,
+                0.112785,
+                242616,
+                248152
+            ],
+            "nQuads": 108,
+            "nMops": 256
+        },
+        "DFFSQXL": {
+            "start_perf": [
+                2.5737919807434082,
+                0.75209000000000004,
+                0.12009,
+                242616,
+                248152,
+                1742147736.74805
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.5778698921203613,
+                0.75559699999999996,
+                0.12009,
+                242616,
+                248152
+            ],
+            "nQuads": 79,
+            "nMops": 127
+        },
+        "fir": {
+            "start_perf": [
+                2.2860639095306396,
+                0.64769900000000002,
+                0.102696,
+                240312,
+                248152,
+                1742147736.4603219
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.3341031074523926,
+                0.67758399999999996,
+                0.105808,
+                242360,
+                248152
+            ],
+            "nQuads": 915,
+            "nMops": 1499
+        },
+        "...MASTER...": {
+            "start_perf": [
+                2.1628220081329346,
+                0.57896599999999998,
+                0.092107999999999995,
+                234144,
+                248152,
+                1742147736.33708
+            ],
+            "end_perf": [
+                2.1831340789794922,
+                0.58152800000000004,
+                0.094218999999999997,
+                235644,
+                248152
+            ],
+            "nQuads": 0,
+            "nMops": 0
+        },
+        "NAND2XL": {
+            "start_perf": [
+                2.588886022567749,
+                0.76309199999999999,
+                0.120916,
+                242616,
+                248152,
+                1742147736.763144
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.5926690101623535,
+                0.76529499999999995,
+                0.12094299999999999,
+                242616,
+                248152
+            ],
+            "nQuads": 18,
+            "nMops": 44
+        },
+        "CMPR42X1": {
+            "start_perf": [
+                2.3442389965057373,
+                0.68389200000000006,
+                0.10857,
+                242616,
+                248152,
+                1742147736.518497
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4246089458465576,
+                0.69077200000000005,
+                0.10971,
+                242616,
+                248152
+            ],
+            "nQuads": 257,
+            "nMops": 705
+        },
+        "fir_tb": {
+            "start_perf": [
+                2.1835460662841797,
+                0.581874,
+                0.094274999999999998,
+                235644,
+                248152,
+                1742147736.3578041
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 59,
+            "end_perf": [
+                2.2859880924224854,
+                0.64763300000000001,
+                0.102686,
+                240312,
+                248152
+            ],
+            "nQuads": 2745,
+            "nMops": 5308
+        },
+        "DFFRQXL": {
+            "start_perf": [
+                2.5690710544586182,
+                0.75035700000000005,
+                0.118102,
+                242616,
+                248152,
+                1742147736.743329
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.5737340450286865,
+                0.75204000000000004,
+                0.12008199999999999,
+                242616,
+                248152
+            ],
+            "nQuads": 79,
+            "nMops": 127
+        },
+        "ADDFXL": {
+            "start_perf": [
+                2.4246690273284912,
+                0.69082399999999999,
+                0.109719,
+                242616,
+                248152,
+                1742147736.598927
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4296560287475586,
+                0.69444799999999995,
+                0.110665,
+                242616,
+                248152
+            ],
+            "nQuads": 132,
+            "nMops": 329
+        },
+        "OA21XL": {
+            "start_perf": [
+                2.630403995513916,
+                0.78786599999999996,
+                0.12524099999999999,
+                242616,
+                248152,
+                1742147736.804662
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6367700099945068,
+                0.79040299999999997,
+                0.12581500000000001,
+                242616,
+                248152
+            ],
+            "nQuads": 43,
+            "nMops": 111
+        },
+        "AOI211XL": {
+            "start_perf": [
+                2.4462590217590332,
+                0.70890200000000003,
+                0.111558,
+                242616,
+                248152,
+                1742147736.620517
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4511549472808838,
+                0.71218599999999999,
+                0.111596,
+                242616,
+                248152
+            ],
+            "nQuads": 64,
+            "nMops": 138
+        },
+        "AO21XL": {
+            "start_perf": [
+                2.4355020523071289,
+                0.69967800000000002,
+                0.11067200000000001,
+                242616,
+                248152,
+                1742147736.60976
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4384109973907471,
+                0.70257700000000001,
+                0.11067200000000001,
+                242616,
+                248152
+            ],
+            "nQuads": 43,
+            "nMops": 108
+        },
+        "DFFRXL": {
+            "start_perf": [
+                2.5016899108886719,
+                0.74429599999999996,
+                0.117948,
+                242616,
+                248152,
+                1742147736.6759479
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.5690109729766846,
+                0.750305,
+                0.118094,
+                242616,
+                248152
+            ],
+            "nQuads": 79,
+            "nMops": 127
+        },
+        "DFFSRXL": {
+            "start_perf": [
+                2.5779259204864502,
+                0.75565400000000005,
+                0.12009,
+                242616,
+                248152,
+                1742147736.7521839
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.5831670761108398,
+                0.75897999999999999,
+                0.120908,
+                242616,
+                248152
+            ],
+            "nQuads": 102,
+            "nMops": 173
+        },
+        "OAI2B2XL": {
+            "start_perf": [
+                2.6782131195068359,
+                0.81038600000000005,
+                0.13119500000000001,
+                242616,
+                248152,
+                1742147736.8524711
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6849119663238525,
+                0.81298300000000001,
+                0.132299,
+                242616,
+                248152
+            ],
+            "nQuads": 62,
+            "nMops": 152
+        },
+        "AOI21BXL": {
+            "start_perf": [
+                2.4552280902862549,
+                0.71527700000000005,
+                0.11160299999999999,
+                242616,
+                248152,
+                1742147736.6294861
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4591701030731201,
+                0.717248,
+                0.112608,
+                242616,
+                248152
+            ],
+            "nQuads": 43,
+            "nMops": 108
+        },
+        "AO2B2XL": {
+            "start_perf": [
+                2.4421529769897461,
+                0.70618999999999998,
+                0.110721,
+                242616,
+                248152,
+                1742147736.616411
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4462010860443115,
+                0.70885200000000004,
+                0.11155,
+                242616,
+                248152
+            ],
+            "nQuads": 62,
+            "nMops": 164
+        },
+        "NAND3XL": {
+            "start_perf": [
+                2.5963850021362305,
+                0.76654500000000003,
+                0.12199599999999999,
+                242616,
+                248152,
+                1742147736.770643
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6002950668334961,
+                0.768119,
+                0.123102,
+                242616,
+                248152
+            ],
+            "nQuads": 42,
+            "nMops": 79
+        },
+        "bram32": {
+            "start_perf": [
+                2.3342230319976807,
+                0.67758399999999996,
+                0.10592799999999999,
+                242360,
+                248152,
+                1742147736.508481
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 59,
+            "end_perf": [
+                2.3441779613494873,
+                0.68383899999999997,
+                0.10856200000000001,
+                242616,
+                248152
+            ],
+            "nQuads": 344,
+            "nMops": 1354
+        },
+        "OR3XL": {
+            "start_perf": [
+                2.7049939632415771,
+                0.827982,
+                0.133132,
+                242616,
+                248152,
+                1742147736.879252
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.7076220512390137,
+                0.82965699999999998,
+                0.134075,
+                242616,
+                248152
+            ],
+            "nQuads": 42,
+            "nMops": 79
+        },
+        "AOI2BB2XL": {
+            "start_perf": [
+                2.4820671081542969,
+                0.73209400000000002,
+                0.115754,
+                242616,
+                248152,
+                1742147736.6563251
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4860379695892334,
+                0.73556900000000003,
+                0.115754,
+                242616,
+                248152
+            ],
+            "nQuads": 62,
+            "nMops": 158
+        },
+        "OR4XL": {
+            "start_perf": [
+                2.7076790332794189,
+                0.82970600000000005,
+                0.13408300000000001,
+                242616,
+                248152,
+                1742147736.881937
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.7106180191040039,
+                0.83164099999999996,
+                0.135078,
+                242616,
+                248152
+            ],
+            "nQuads": 58,
+            "nMops": 112
+        },
+        "ADDHXL": {
+            "start_perf": [
+                2.4297139644622803,
+                0.69449799999999995,
+                0.11067200000000001,
+                242616,
+                248152,
+                1742147736.603972
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4327609539031982,
+                0.69694599999999995,
+                0.11067200000000001,
+                242616,
+                248152
+            ],
+            "nQuads": 30,
+            "nMops": 92
+        },
+        "AND3XL": {
+            "start_perf": [
+                2.4328188896179199,
+                0.69700399999999996,
+                0.11067200000000001,
+                242616,
+                248152,
+                1742147736.6070769
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4354450702667236,
+                0.69962100000000005,
+                0.11067200000000001,
+                242616,
+                248152
+            ],
+            "nQuads": 42,
+            "nMops": 79
+        },
+        "AO22XL": {
+            "start_perf": [
+                2.4384689331054688,
+                0.70263500000000001,
+                0.11067200000000001,
+                242616,
+                248152,
+                1742147736.6127269
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4420840740203857,
+                0.70618999999999998,
+                0.11067200000000001,
+                242616,
+                248152
+            ],
+            "nQuads": 62,
+            "nMops": 164
+        },
+        "OAI2BB2XL": {
+            "start_perf": [
+                2.6912291049957275,
+                0.81537999999999999,
+                0.13304099999999999,
+                242616,
+                248152,
+                1742147736.8654871
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6957900524139404,
+                0.81883300000000003,
+                0.13311000000000001,
+                242616,
+                248152
+            ],
+            "nQuads": 62,
+            "nMops": 152
+        },
+        "AOI21XL": {
+            "start_perf": [
+                2.4512119293212891,
+                0.71223499999999995,
+                0.11160299999999999,
+                242616,
+                248152,
+                1742147736.6254699
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4551699161529541,
+                0.71521999999999997,
+                0.11160299999999999,
+                242616,
+                248152
+            ],
+            "nQuads": 43,
+            "nMops": 108
+        },
+        "AOI221XL": {
+            "start_perf": [
+                2.4592280387878418,
+                0.71729699999999996,
+                0.11261599999999999,
+                242616,
+                248152,
+                1742147736.633486
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4657680988311768,
+                0.721109,
+                0.112736,
+                242616,
+                248152
+            ],
+            "nQuads": 86,
+            "nMops": 197
+        },
+        "AOI22XL": {
+            "start_perf": [
+                2.4708569049835205,
+                0.72553199999999995,
+                0.112792,
+                242616,
+                248152,
+                1742147736.6451149
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4754369258880615,
+                0.72811000000000003,
+                0.113735,
+                242616,
+                248152
+            ],
+            "nQuads": 62,
+            "nMops": 164
+        },
+        "MXI2XL": {
+            "start_perf": [
+                2.5852360725402832,
+                0.76053300000000001,
+                0.120916,
+                242616,
+                248152,
+                1742147736.7594941
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.5888290405273438,
+                0.76303500000000002,
+                0.120916,
+                242616,
+                248152
+            ],
+            "nQuads": 48,
+            "nMops": 85
+        },
+        "OAI221XL": {
+            "start_perf": [
+                2.6470789909362793,
+                0.79606399999999999,
+                0.12676100000000001,
+                242616,
+                248152,
+                1742147736.821337
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6531140804290771,
+                0.79912399999999995,
+                0.12761600000000001,
+                242616,
+                248152
+            ],
+            "nQuads": 86,
+            "nMops": 185
+        },
+        "AOI2B1XL": {
+            "start_perf": [
+                2.4754960536956787,
+                0.72816099999999995,
+                0.113743,
+                242616,
+                248152,
+                1742147736.649754
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4790389537811279,
+                0.73008799999999996,
+                0.114742,
+                242616,
+                248152
+            ],
+            "nQuads": 43,
+            "nMops": 108
+        },
+        "NAND2BXL": {
+            "start_perf": [
+                2.5927259922027588,
+                0.76534400000000002,
+                0.12095,
+                242616,
+                248152,
+                1742147736.766984
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.5963280200958252,
+                0.76649599999999996,
+                0.121988,
+                242616,
+                248152
+            ],
+            "nQuads": 18,
+            "nMops": 44
+        },
+        "OR2XL": {
+            "start_perf": [
+                2.702826976776123,
+                0.825824,
+                0.133132,
+                242616,
+                248152,
+                1742147736.877085
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.7049379348754883,
+                0.82792600000000005,
+                0.133132,
+                242616,
+                248152
+            ],
+            "nQuads": 18,
+            "nMops": 44
+        },
+        "OAI2B1XL": {
+            "start_perf": [
+                2.6687779426574707,
+                0.80761799999999995,
+                0.130554,
+                242616,
+                248152,
+                1742147736.8430359
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6781558990478516,
+                0.81033699999999997,
+                0.131187,
+                242616,
+                248152
+            ],
+            "nQuads": 43,
+            "nMops": 102
+        },
+        "INVXL": {
+            "start_perf": [
+                2.5832250118255615,
+                0.75902999999999998,
+                0.120916,
+                242616,
+                248152,
+                1742147736.757483
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.5851790904998779,
+                0.76047600000000004,
+                0.120916,
+                242616,
+                248152
+            ],
+            "nQuads": 0,
+            "nMops": 0
+        },
+        "OAI32XL": {
+            "start_perf": [
+                2.698976993560791,
+                0.82199,
+                0.133132,
+                242616,
+                248152,
+                1742147736.873235
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.7027699947357178,
+                0.82576700000000003,
+                0.133132,
+                242616,
+                248152
+            ],
+            "nQuads": 76,
+            "nMops": 171
+        },
+        "AOI2BB1XL": {
+            "start_perf": [
+                2.4790959358215332,
+                0.73013799999999995,
+                0.11475,
+                242616,
+                248152,
+                1742147736.6533539
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4820098876953125,
+                0.73204499999999995,
+                0.115746,
+                242616,
+                248152
+            ],
+            "nQuads": 43,
+            "nMops": 102
+        },
+        "NOR3XL": {
+            "start_perf": [
+                2.6193809509277344,
+                0.77934700000000001,
+                0.12524099999999999,
+                242616,
+                248152,
+                1742147736.7936389
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6230599880218506,
+                0.78205100000000005,
+                0.12524099999999999,
+                242616,
+                248152
+            ],
+            "nQuads": 42,
+            "nMops": 79
+        },
+        "AOI31XL": {
+            "start_perf": [
+                2.4860949516296387,
+                0.735626,
+                0.115754,
+                242616,
+                248152,
+                1742147736.6603529
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4897708892822266,
+                0.73780299999999999,
+                0.11670800000000001,
+                242616,
+                248152
+            ],
+            "nQuads": 51,
+            "nMops": 113
+        },
+        "OAI31XL": {
+            "start_perf": [
+                2.6958470344543457,
+                0.818882,
+                0.13311799999999999,
+                242616,
+                248152,
+                1742147736.870105
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6989200115203857,
+                0.82194100000000003,
+                0.13312399999999999,
+                242616,
+                248152
+            ],
+            "nQuads": 51,
+            "nMops": 113
+        },
+        "AOI32XL": {
+            "start_perf": [
+                2.4898269176483154,
+                0.73785199999999995,
+                0.116716,
+                242616,
+                248152,
+                1742147736.6640849
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4963729381561279,
+                0.74166299999999996,
+                0.116837,
+                242616,
+                248152
+            ],
+            "nQuads": 76,
+            "nMops": 177
+        },
+        "OAI2B11XL": {
+            "start_perf": [
+                2.662790060043335,
+                0.80425999999999997,
+                0.13050200000000001,
+                242616,
+                248152,
+                1742147736.8370481
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6687209606170654,
+                0.80756799999999995,
+                0.130546,
+                242616,
+                248152
+            ],
+            "nQuads": 64,
+            "nMops": 132
+        },
+        "CLKAND2X2": {
+            "start_perf": [
+                2.4964299201965332,
+                0.74171200000000004,
+                0.116845,
+                242616,
+                248152,
+                1742147736.6706879
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.4985449314117432,
+                0.74279200000000001,
+                0.117871,
+                242616,
+                248152
+            ],
+            "nQuads": 18,
+            "nMops": 50
+        },
+        "CLKBUFX2": {
+            "start_perf": [
+                2.498600959777832,
+                0.74283999999999994,
+                0.117878,
+                242616,
+                248152,
+                1742147736.672859
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.5016329288482666,
+                0.74424699999999999,
+                0.11794,
+                242616,
+                248152
+            ],
+            "nQuads": 0,
+            "nMops": 0
+        },
+        "NAND3BXL": {
+            "start_perf": [
+                2.6003549098968506,
+                0.76817100000000005,
+                0.12311,
+                242616,
+                248152,
+                1742147736.7746129
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6040260791778564,
+                0.77075499999999997,
+                0.123198,
+                242616,
+                248152
+            ],
+            "nQuads": 42,
+            "nMops": 79
+        },
+        "NAND4XL": {
+            "start_perf": [
+                2.6040830612182617,
+                0.77080300000000002,
+                0.123206,
+                242616,
+                248152,
+                1742147736.7783411
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6082139015197754,
+                0.77193599999999996,
+                0.12509600000000001,
+                242616,
+                248152
+            ],
+            "nQuads": 58,
+            "nMops": 112
+        },
+        "NAND4BXL": {
+            "start_perf": [
+                2.6082699298858643,
+                0.771984,
+                0.12510399999999999,
+                242616,
+                248152,
+                1742147736.7825279
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6117610931396484,
+                0.77481599999999995,
+                0.12523300000000001,
+                242616,
+                248152
+            ],
+            "nQuads": 58,
+            "nMops": 112
+        },
+        "NOR2XL": {
+            "start_perf": [
+                2.6118171215057373,
+                0.77486500000000003,
+                0.12524099999999999,
+                242616,
+                248152,
+                1742147736.7860751
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6161410808563232,
+                0.77708699999999997,
+                0.12524099999999999,
+                242616,
+                248152
+            ],
+            "nQuads": 18,
+            "nMops": 44
+        },
+        "NOR2BXL": {
+            "start_perf": [
+                2.6161980628967285,
+                0.77714300000000003,
+                0.12524099999999999,
+                242616,
+                248152,
+                1742147736.7904561
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.619326114654541,
+                0.77929099999999996,
+                0.12524099999999999,
+                242616,
+                248152
+            ],
+            "nQuads": 18,
+            "nMops": 44
+        },
+        "NOR3BXL": {
+            "start_perf": [
+                2.6231250762939453,
+                0.782115,
+                0.12524099999999999,
+                242616,
+                248152,
+                1742147736.7973831
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6267900466918945,
+                0.78478400000000004,
+                0.12524099999999999,
+                242616,
+                248152
+            ],
+            "nQuads": 42,
+            "nMops": 79
+        },
+        "NOR4XL": {
+            "start_perf": [
+                2.6268470287322998,
+                0.78484100000000001,
+                0.12524099999999999,
+                242616,
+                248152,
+                1742147736.801105
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6303479671478271,
+                0.78780899999999998,
+                0.12524099999999999,
+                242616,
+                248152
+            ],
+            "nQuads": 58,
+            "nMops": 112
+        },
+        "OAI211XL": {
+            "start_perf": [
+                2.6368269920349121,
+                0.79045200000000004,
+                0.12582199999999999,
+                242616,
+                248152,
+                1742147736.811085
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6429069042205811,
+                0.79386599999999996,
+                0.12582199999999999,
+                242616,
+                248152
+            ],
+            "nQuads": 64,
+            "nMops": 132
+        },
+        "OAI21XL": {
+            "start_perf": [
+                2.6429650783538818,
+                0.79392300000000005,
+                0.12582199999999999,
+                242616,
+                248152,
+                1742147736.8172231
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.647022008895874,
+                0.79601500000000003,
+                0.12675400000000001,
+                242616,
+                248152
+            ],
+            "nQuads": 43,
+            "nMops": 102
+        },
+        "OAI222XL": {
+            "start_perf": [
+                2.6531710624694824,
+                0.79912399999999995,
+                0.12767999999999999,
+                242616,
+                248152,
+                1742147736.8274291
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6574881076812744,
+                0.801566,
+                0.12954599999999999,
+                242616,
+                248152
+            ],
+            "nQuads": 108,
+            "nMops": 238
+        },
+        "OAI22XL": {
+            "start_perf": [
+                2.6575438976287842,
+                0.80161499999999997,
+                0.129553,
+                242616,
+                248152,
+                1742147736.8318019
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6627330780029297,
+                0.80421100000000001,
+                0.130494,
+                242616,
+                248152
+            ],
+            "nQuads": 62,
+            "nMops": 152
+        },
+        "OAI2BB1XL": {
+            "start_perf": [
+                2.6849699020385742,
+                0.81303199999999998,
+                0.13230700000000001,
+                242616,
+                248152,
+                1742147736.8592279
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.6911730766296387,
+                0.81533100000000003,
+                0.13303300000000001,
+                242616,
+                248152
+            ],
+            "nQuads": 43,
+            "nMops": 102
+        },
+        "XNOR2XL": {
+            "start_perf": [
+                2.7106759548187256,
+                0.83169000000000004,
+                0.13508600000000001,
+                242616,
+                248152,
+                1742147736.8849339
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.7127740383148193,
+                0.83376799999999995,
+                0.13509599999999999,
+                242616,
+                248152
+            ],
+            "nQuads": 18,
+            "nMops": 44
+        },
+        "XOR2XL": {
+            "start_perf": [
+                2.7128300666809082,
+                0.83381700000000003,
+                0.135104,
+                242616,
+                248152,
+                1742147736.8870881
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.7149369716644287,
+                0.83590200000000003,
+                0.13511500000000001,
+                242616,
+                248152
+            ],
+            "nQuads": 18,
+            "nMops": 44
+        },
+        "XOR3XL": {
+            "start_perf": [
+                2.7149930000305176,
+                0.835951,
+                0.13512299999999999,
+                242616,
+                248152,
+                1742147736.889251
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "end_perf": [
+                2.7176070213317871,
+                0.83760500000000004,
+                0.136073,
+                242616,
+                248152
+            ],
+            "nQuads": 42,
+            "nMops": 79
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.59/_15226_archive_1.a",
+            "objects": [
+                [
+                    "aMFWh_d.o",
+                    108412
+                ],
+                [
+                    "ujt4N_d.o",
+                    305415
+                ],
+                [
+                    "JDmIf_d.o",
+                    11648
+                ],
+                [
+                    "f8nqa_d.o",
+                    11688
+                ],
+                [
+                    "D1wVr_d.o",
+                    8909
+                ],
+                [
+                    "xAVMd_d.o",
+                    6718
+                ],
+                [
+                    "FW8wG_d.o",
+                    7103
+                ],
+                [
+                    "LYkvL_d.o",
+                    7382
+                ],
+                [
+                    "t0Hd0_d.o",
+                    7802
+                ],
+                [
+                    "eQUpD_d.o",
+                    7802
+                ],
+                [
+                    "Wk0jI_d.o",
+                    7644
+                ],
+                [
+                    "t8sfL_d.o",
+                    7383
+                ],
+                [
+                    "SiAYE_d.o",
+                    7415
+                ],
+                [
+                    "BUsfE_d.o",
+                    8072
+                ],
+                [
+                    "G6ems_d.o",
+                    8508
+                ],
+                [
+                    "Kx8dR_d.o",
+                    7803
+                ],
+                [
+                    "TaEc5_d.o",
+                    7415
+                ],
+                [
+                    "uZF5n_d.o",
+                    7411
+                ],
+                [
+                    "m7gfL_d.o",
+                    7831
+                ],
+                [
+                    "y5jFc_d.o",
+                    7521
+                ],
+                [
+                    "RctLc_d.o",
+                    8141
+                ],
+                [
+                    "Dps8g_d.o",
+                    6509
+                ],
+                [
+                    "bF9Ux_d.o",
+                    6077
+                ],
+                [
+                    "D0Gi6_d.o",
+                    8576
+                ],
+                [
+                    "N95Kp_d.o",
+                    8576
+                ],
+                [
+                    "L17Lj_d.o",
+                    8576
+                ],
+                [
+                    "pCvbK_d.o",
+                    8824
+                ],
+                [
+                    "FsUsG_d.o",
+                    6045
+                ],
+                [
+                    "Jacfd_d.o",
+                    7279
+                ],
+                [
+                    "C4bJV_d.o",
+                    6531
+                ],
+                [
+                    "B7bZD_d.o",
+                    6563
+                ],
+                [
+                    "zJkFY_d.o",
+                    7100
+                ],
+                [
+                    "YFzvB_d.o",
+                    7132
+                ],
+                [
+                    "RaaAR_d.o",
+                    7328
+                ],
+                [
+                    "APaqQ_d.o",
+                    7360
+                ],
+                [
+                    "UiF6Q_d.o",
+                    6530
+                ],
+                [
+                    "kQMYW_d.o",
+                    6530
+                ],
+                [
+                    "qsiak_d.o",
+                    7103
+                ],
+                [
+                    "yEYNK_d.o",
+                    7103
+                ],
+                [
+                    "Bxps4_d.o",
+                    7327
+                ],
+                [
+                    "nYeNM_d.o",
+                    7374
+                ],
+                [
+                    "i85VS_d.o",
+                    7693
+                ],
+                [
+                    "nqk2t_d.o",
+                    7440
+                ],
+                [
+                    "GYQvg_d.o",
+                    8145
+                ],
+                [
+                    "yKCjh_d.o",
+                    8605
+                ],
+                [
+                    "z4Vhc_d.o",
+                    7888
+                ],
+                [
+                    "RchZy_d.o",
+                    7689
+                ],
+                [
+                    "f9N6m_d.o",
+                    7472
+                ],
+                [
+                    "Imu1K_d.o",
+                    7920
+                ],
+                [
+                    "Hevxk_d.o",
+                    7412
+                ],
+                [
+                    "eKshN_d.o",
+                    7888
+                ],
+                [
+                    "jIuBP_d.o",
+                    7517
+                ],
+                [
+                    "A3I3t_d.o",
+                    8193
+                ],
+                [
+                    "Ljmab_d.o",
+                    6529
+                ],
+                [
+                    "DF2I0_d.o",
+                    7098
+                ],
+                [
+                    "kHJ20_d.o",
+                    7334
+                ],
+                [
+                    "rpKsx_d.o",
+                    6531
+                ],
+                [
+                    "QZEIi_d.o",
+                    6530
+                ],
+                [
+                    "Nnn6h_d.o",
+                    7103
+                ],
+                [
+                    "amcQwB.o",
+                    120057
+                ]
+            ],
+            "size": 967510
+        }
+    ]
+}

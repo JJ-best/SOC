@@ -1,4 +1,4 @@
- // version 6: AXI Lite Asynchrounous
+// version 11: AXI Lite Asynchrounous
 
 
 
@@ -117,7 +117,7 @@ reg [(pADDR_WIDTH-1):0] data_addr_w;
 wire [(pADDR_WIDTH-1):0] data_addr_w_next;
 reg [(pADDR_WIDTH-1) : 0] data_addr_r;
 wire [(pADDR_WIDTH-1) : 0] data_addr_r_next;
-reg [(pDATA_WIDTH-1) : 0] data_x;
+wire [(pDATA_WIDTH-1) : 0] data_x;
 wire [(pDATA_WIDTH-1) : 0] tap_h;
 wire [(pDATA_WIDTH-1) : 0] x_mul_h_next;
 wire [(pDATA_WIDTH-1) : 0] y_next;
@@ -530,6 +530,8 @@ end
 always @(posedge axis_clk or negedge axis_rst_n) begin
   if (!axis_rst_n) begin
     data_addr_w <= 12'h80;
+  end else if (ap_ctrl == 3'b101) begin
+    data_addr_w <= 12'h80;
   end else if (ss_state == SS_WRITE) begin//應該只有在第一次DONE時加值 或改成SSWRITE
     data_addr_w <= data_addr_w_next; //+4
   end else if (ap_ctrl == 3'b100) begin
@@ -576,20 +578,7 @@ end
 assign data_addr_r_next = (data_addr_r == 12'h80)? 12'h80 + (coef_length - 1) * 4 : data_addr_r - 12'h4;
 
 //-----core engine-----//
-always @(*) begin
-  if (ss_state == SS_PROC1) begin
-    data_x = ss_tdata_tmp;
-  end else if (ss_state == SS_WRITE) begin
-    data_x = ss_tdata_tmp;
-  end else if ((mode_state == SM_MODE && sm_state == SM_WAIT1) | ss_state == SS_PROC ) begin
-    data_x = data_Do;
-  end else if (ss_state == SS_PROC1 | (ss_state == SS_DONE && sm_state == SM_WAIT1)) begin
-    data_x = data_Do;
-  end else begin
-    data_x = ss_tdata_tmp;
-  end
-end
-//assign data_x = ()? data_Do : 0;//在write, process時
+assign data_x = ((mode_state == SM_MODE && sm_state == SM_WAIT1) | ss_state == SS_PROC | ss_state == SS_PROC1 | (ss_state == SS_DONE && sm_state == SM_WAIT1))? data_Do : 0;//在write, process時
 assign tap_h = ((mode_state == SM_MODE && sm_state == SM_WAIT1) | ss_state == SS_PROC | ss_state == SS_PROC1 | (ss_state == SS_DONE && sm_state == SM_WAIT1))? tap_Do : 0;
 assign x_mul_h_next = data_x * tap_h;
 assign y_next = x_mul_h + y;

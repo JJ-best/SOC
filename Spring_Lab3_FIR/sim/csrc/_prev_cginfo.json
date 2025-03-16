@@ -1,61 +1,90 @@
 {
-    "PEModules": [],
+    "CurCompileUdps": {},
     "MlibObjs": {},
-    "CompileStatus": "Successful",
     "PrevCompiledModules": {
         "fir_tb": {
             "aMFWh_d": {
-                "mode": 4,
-                "out": "aMFWh_d.o",
-                "bytes": 108412,
-                "mod": "fir_tb",
+                "archive": "archive.58/_13985_archive_1.a",
                 "checksum": 0,
-                "archive": "archive.54/_27605_archive_1.a"
-            }
-        },
-        "udp_tlat": {
-            "udp_tlat": {
+                "bytes": 165880,
                 "mode": 4,
-                "out": "objs/udps/gSqMj.o",
-                "bytes": 0,
-                "mod": "udp_tlat"
+                "mod": "fir_tb",
+                "out": "aMFWh_d.o"
             }
         },
         "bram32": {
             "JDmIf_d": {
-                "mode": 4,
-                "out": "JDmIf_d.o",
-                "bytes": 11648,
-                "mod": "bram32",
+                "archive": "archive.58/_prev_archive_1.a",
                 "checksum": 0,
-                "archive": "archive.54/_27605_archive_1.a"
+                "bytes": 11648,
+                "mode": 4,
+                "mod": "bram32",
+                "out": "JDmIf_d.o"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "out": "objs/amcQw_d.o",
-                "mode": 4,
+                "checksum": 0,
                 "bytes": 7387,
+                "mode": 4,
                 "mod": "...MASTER...",
-                "checksum": 0
-            }
-        },
-        "udp_dff": {
-            "udp_dff": {
-                "mode": 4,
-                "out": "objs/udps/exIG1.o",
-                "bytes": 0,
-                "mod": "udp_dff"
-            }
-        },
-        "udp_mux2": {
-            "udp_mux2": {
-                "mode": 4,
-                "out": "objs/udps/U7Vwg.o",
-                "bytes": 0,
-                "mod": "udp_mux2"
+                "out": "objs/amcQw_d.o"
             }
         }
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "fir_tb",
+        "fir_tb",
+        "bram32"
+    ],
+    "stat": {
+        "mop/quad": 2.5277501491943504,
+        "ru_self_cgstart": {
+            "ru_nivcsw": 67,
+            "ru_nvcsw": 291,
+            "ru_maxrss_kb": 65928,
+            "ru_utime_sec": 0.146427,
+            "ru_stime_sec": 0.071759000000000003,
+            "ru_minflt": 25701,
+            "ru_majflt": 0
+        },
+        "totalObjSize": 277721,
+        "CodeGen(%)": 47.562687561326733,
+        "ru_childs_cgstart": {
+            "ru_nivcsw": 44,
+            "ru_nvcsw": 67,
+            "ru_maxrss_kb": 17476,
+            "ru_utime_sec": 0.020757999999999999,
+            "ru_stime_sec": 0.067984000000000003,
+            "ru_minflt": 10231,
+            "ru_majflt": 0
+        },
+        "mopSpeed": 95674.434363588458,
+        "nMops": 12707,
+        "ru_childs_end": {
+            "ru_nivcsw": 47,
+            "ru_nvcsw": 74,
+            "ru_maxrss_kb": 17908,
+            "ru_utime_sec": 0.022664,
+            "ru_stime_sec": 0.072747999999999993,
+            "ru_minflt": 10806,
+            "ru_majflt": 0
+        },
+        "nQuads": 5027,
+        "ru_self_end": {
+            "ru_nivcsw": 95,
+            "ru_nvcsw": 408,
+            "ru_maxrss_kb": 77800,
+            "ru_utime_sec": 0.27924199999999999,
+            "ru_stime_sec": 0.087817999999999993,
+            "ru_minflt": 29895,
+            "ru_majflt": 0
+        },
+        "quadSpeed": 37849.640477355722,
+        "outputSizePerQuad": 55.245872289635969,
+        "Frontend(%)": 52.437312438673267,
+        "peak_mem_kb": 243736
     },
     "NameTable": {
         "fir_tb": [
@@ -77,81 +106,27 @@
             3
         ]
     },
-    "CompileStrategy": "fullobj",
-    "stat": {
-        "outputSizePerQuad": 54.247084952803995,
-        "quadSpeed": 30871.815969008192,
-        "ru_self_cgstart": {
-            "ru_minflt": 23954,
-            "ru_utime_sec": 0.20411000000000001,
-            "ru_majflt": 0,
-            "ru_stime_sec": 0.093423000000000006,
-            "ru_nivcsw": 61,
-            "ru_maxrss_kb": 70268,
-            "ru_nvcsw": 318
-        },
-        "mopSpeed": 77850.914783960136,
-        "ru_childs_cgstart": {
-            "ru_minflt": 10231,
-            "ru_utime_sec": 0.033808999999999999,
-            "ru_majflt": 0,
-            "ru_stime_sec": 0.086463999999999999,
-            "ru_nivcsw": 36,
-            "ru_maxrss_kb": 21844,
-            "ru_nvcsw": 102
-        },
-        "nMops": 13625,
-        "mop/quad": 2.5217471774939848,
-        "nQuads": 5403,
-        "peak_mem_kb": 244060,
-        "totalObjSize": 293097,
-        "ru_self_end": {
-            "ru_minflt": 28291,
-            "ru_utime_sec": 0.37912400000000002,
-            "ru_majflt": 0,
-            "ru_stime_sec": 0.115647,
-            "ru_nivcsw": 79,
-            "ru_maxrss_kb": 82928,
-            "ru_nvcsw": 444
-        },
-        "ru_childs_end": {
-            "ru_minflt": 10806,
-            "ru_utime_sec": 0.034691,
-            "ru_majflt": 0,
-            "ru_stime_sec": 0.094405000000000003,
-            "ru_nivcsw": 38,
-            "ru_maxrss_kb": 22212,
-            "ru_nvcsw": 107
-        },
-        "Frontend(%)": 53.837266962787901,
-        "CodeGen(%)": 46.162733037212099
-    },
-    "CurCompileUdps": {},
-    "CurCompileModules": [
-        "...MASTER...",
-        "fir_tb",
-        "fir_tb",
-        "bram32",
-        "bram32"
-    ],
     "LVLData": [
         "SIM"
     ],
+    "CompileStrategy": "fullobj",
     "SIMBData": {
-        "bytes": 115809,
         "out": "amcQwB.o",
-        "archive": "archive.54/_27605_archive_1.a"
+        "archive": "archive.58/_13985_archive_1.a",
+        "bytes": 115729
     },
+    "PEModules": [],
     "CompileProcesses": [
-        "cgproc.27605.json"
+        "cgproc.13985.json"
     ],
     "Misc": {
         "default_output_dir": "csrc",
         "cwd": "/home/u110/u110022124/SOC/labfir_v9/sim",
         "csrc": "csrc",
-        "daidir_abs": "/home/u110/u110022124/SOC/labfir_v9/sim/simv.daidir",
         "csrc_abs": "/home/u110/u110022124/SOC/labfir_v9/sim/csrc",
-        "archive_dir": "archive.54",
+        "archive_dir": "archive.58",
+        "daidir_abs": "/home/u110/u110022124/SOC/labfir_v9/sim/simv.daidir",
         "daidir": "simv.daidir"
-    }
+    },
+    "CompileStatus": "Successful"
 }

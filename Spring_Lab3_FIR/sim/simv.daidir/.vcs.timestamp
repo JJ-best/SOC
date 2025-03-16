@@ -41,7 +41,7 @@ tb.v
 sysc_uni_pwd=/home/u110/u110022124/SOC/labfir_v9/sim
 mraarch=linux_64
 installdir=/usr/cadtool/synopsys/hspice/U-2023.03-SP1/hspice
-XDG_SESSION_ID=16923
+XDG_SESSION_ID=16677
 XDG_RUNTIME_DIR=/run/user/23163
 VMR_MODE_FLAG=64
 VERDI_HOME=/usr/cad/synopsys/verdi/2019.06
@@ -58,9 +58,9 @@ TOOL_HOME=/usr/cad/synopsys/vcs/2017.12/linux64
 TMIARCH=RH_64
 SYN_MAN_DIR=/usr/cad/synopsys/vcs/2017.12/doc/man
 SYNTHESIS=/usr/cad/synopsys/synthesis/cur
-SSH_TTY=/dev/pts/22
-SSH_CONNECTION=140.114.24.31 60524 140.114.24.118 22
-SSH_CLIENT=140.114.24.31 60524 22
+SSH_TTY=/dev/pts/13
+SSH_CONNECTION=140.114.24.31 46550 140.114.24.116 22
+SSH_CLIENT=140.114.24.31 46550 22
 SPAPI_AHDL_INCLUDE=/usr/cadtool/synopsys/hspice/U-2023.03-SP1/hspice/include
 SNPS_VCS_CLANG_PATH=/fs/src/interfaces/LLVM_Project/QSCM/opt/llvm-3.9.1/linux64
 SNPS_PLATFORM=linux64
@@ -107,11 +107,11 @@ CALIBRE_HOME=/usr/cad/mentor/calibre/cur
 ARCH=linux64
 0
 8
-1742140471 ../syn/netlist/fir_syn.sdf
+1742147721 ../syn/netlist/fir_syn.sdf
 1126312956 /usr/cadtool/ee5216/CBDK_TSMC90GUTM_Arm_f1.0/CIC/Verilog/tsmc090.v
 1126312956 /usr/cadtool/ee5216/CBDK_TSMC90GUTM_Arm_f1.0/CIC/Verilog/tsmc090.v
 1742121524 ../hdl/bram32.v
-1742140471 ../syn/netlist/fir_syn.v
+1742147720 ../syn/netlist/fir_syn.v
 1742137363 tb.v
 1558867316 /usr/cad/synopsys/verdi/2019.06/share/PLI/VCS/LINUX64/verdi.tab
 1510893143 /usr/cad/synopsys/vcs/2017.12/linux64/lib/vcsdp_lite.tab
@@ -121,4 +121,4 @@ ARCH=linux64
 1510893223 /usr/cad/synopsys/vcs/2017.12/linux64/lib/liberrorinf.so
 1510893206 /usr/cad/synopsys/vcs/2017.12/linux64/lib/libsnpsmalloc.so
 1510893451 /usr/cad/synopsys/vcs/2017.12/linux64/lib/libvfs.so
-1742140487 simv.daidir
+1742147744 simv.daidir

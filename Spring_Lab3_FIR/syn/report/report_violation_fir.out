@@ -4,7 +4,7 @@ Report : constraint
         -all_violators
 Design : fir
 Version: R-2020.09-SP5
-Date   : Sun Mar 16 23:54:31 2025
+Date   : Mon Mar 17 01:55:21 2025
 ****************************************
 
 
@@ -191,7 +191,7 @@ Date   : Sun Mar 16 23:54:31 2025
                              Required        Actual
    Design                   Leakage Power  Leakage Power     Slack
    -----------------------------------------------------------------
-   fir                          0.00       73446768.00    -73446768.00
+   fir                          0.00       71176648.00    -71176648.00
                                                                     (VIOLATED)
 
 

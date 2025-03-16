@@ -2,7 +2,7 @@
 ****************************************
 check_design summary:
 Version:     R-2020.09-SP5
-Date:        Sun Mar 16 23:53:54 2025
+Date:        Mon Mar 17 01:54:46 2025
 ****************************************
 
                    Name                                            Total
@@ -15,14 +15,14 @@ Cells                                                               8
     Cells do not drive (LINT-1)                                     8
 --------------------------------------------------------------------------------
 
-Warning: In design 'fir', cell 'B_78' does not drive any nets. (LINT-1)
 Warning: In design 'fir', cell 'B_79' does not drive any nets. (LINT-1)
-Warning: In design 'fir', cell 'B_81' does not drive any nets. (LINT-1)
+Warning: In design 'fir', cell 'B_80' does not drive any nets. (LINT-1)
 Warning: In design 'fir', cell 'B_82' does not drive any nets. (LINT-1)
 Warning: In design 'fir', cell 'B_83' does not drive any nets. (LINT-1)
 Warning: In design 'fir', cell 'B_84' does not drive any nets. (LINT-1)
-Warning: In design 'fir', cell 'B_86' does not drive any nets. (LINT-1)
+Warning: In design 'fir', cell 'B_85' does not drive any nets. (LINT-1)
 Warning: In design 'fir', cell 'B_87' does not drive any nets. (LINT-1)
+Warning: In design 'fir', cell 'B_88' does not drive any nets. (LINT-1)
 Warning: In design 'fir', output port 'tap_WE[3]' is connected directly to output port 'tap_WE[0]'. (LINT-31)
 Warning: In design 'fir', output port 'tap_WE[3]' is connected directly to output port 'tap_WE[1]'. (LINT-31)
 Warning: In design 'fir', output port 'tap_WE[3]' is connected directly to output port 'tap_WE[2]'. (LINT-31)
