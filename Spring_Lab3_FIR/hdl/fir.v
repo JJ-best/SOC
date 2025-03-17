@@ -81,6 +81,10 @@ localparam SS_PROC1 = 3'b011;
 localparam SS_PROC = 3'b100;
 localparam SS_HOLD = 3'b101;
 
+//execute ss_tlast
+localparam SS_INIT = 1'b0;
+localparam SS_LAST = 1'b1;
+
 localparam SM_IDLE = 3'b000;
 localparam SM_WAIT1 = 3'b001;
 localparam SM_WAIT2 = 3'b010;
@@ -151,6 +155,8 @@ wire [(pADDR_WIDTH-1):0]data_addr_f_next;
 wire fresh;
 
 reg [(pDATA_WIDTH-1):0] ss_tdata_tmp;
+reg ss_last_state;
+reg ss_last_state_next;
 
 //-----FSM of write-----//
 always @(*) begin
@@ -655,10 +661,45 @@ always @(posedge axis_clk or negedge axis_rst_n) begin
   end
 end
 
+// always @(*) begin
+//   ss_tready = (ss_state == SS_DONE)? 1 : 0;
+// end
 always @(*) begin
-  ss_tready = (ss_state == SS_DONE)? 1 : 0;
+  if (ss_last_state == SS_LAST) begin
+    ss_tready = 0;
+  end else if (ss_state == SS_DONE) begin
+    ss_tready = 1;
+  end else begin
+    ss_tready = 0;
+  end
 end
 
+always @( *) begin
+  case (ss_last_state)
+    SS_INIT: begin
+      if (ss_tlast & ss_tvalid & ss_tready) begin
+        ss_last_state_next = SS_LAST;
+      end else begin
+        ss_last_state_next = SS_INIT;
+      end
+    end
+    SS_LAST: begin
+      if (ap_ctrl == 3'b101) begin //program 1
+        ss_last_state_next = SS_INIT;
+      end else begin
+        ss_last_state_next = SS_LAST;
+      end
+    end
+  endcase
+end
+
+always @(posedge axis_clk or negedge axis_rst_n) begin
+  if (!axis_rst_n) begin
+    ss_last_state <= SS_INIT;
+  end else begin
+    ss_last_state <= ss_last_state_next;
+  end
+end
 //-----count data process -----//
 always @(posedge axis_clk or negedge axis_rst_n) begin
     if (!axis_rst_n) begin
