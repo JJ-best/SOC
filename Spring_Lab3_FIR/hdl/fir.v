@@ -584,7 +584,7 @@ assign fresh = (data_addr_f == 12'h80 + 4 * (32-1))? 1:0;
 always @(posedge axis_clk or negedge axis_rst_n) begin
   if (!axis_rst_n) begin
     data_addr_f <= 12'h80;
-  end else if (ap_state == AP_DONE) begin
+  end else if (ap_state == AP_INIT) begin//previos version: AP_DONE
     data_addr_f <= 12'h80; 
   end else if (ap_state == AP_FRESH) begin
     data_addr_f <= data_addr_f_next;//+4
