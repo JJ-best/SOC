@@ -3,7 +3,7 @@
 Report : area
 Design : fir
 Version: R-2020.09-SP5
-Date   : Mon Mar 17 01:55:21 2025
+Date   : Thu Mar 20 20:06:55 2025
 ****************************************
 
 Library(s) Used:
@@ -11,21 +11,21 @@ Library(s) Used:
     slow (File: /usr/cadtool/ee5216/CBDK_TSMC90GUTM_Arm_f1.0/CIC/SynopsysDC/db/slow.db)
 
 Number of ports:                          330
-Number of nets:                          3130
-Number of cells:                         2726
-Number of combinational cells:           2422
-Number of sequential cells:               291
+Number of nets:                          3452
+Number of cells:                         3130
+Number of combinational cells:           2825
+Number of sequential cells:               292
 Number of macros/black boxes:               0
-Number of buf/inv:                        549
-Number of references:                      84
+Number of buf/inv:                        578
+Number of references:                      92
 
-Combinational area:              13370.414563
-Buf/Inv area:                     2364.465638
-Noncombinational area:            4673.894409
+Combinational area:              13836.816228
+Buf/Inv area:                     2439.259240
+Noncombinational area:            4752.216020
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                 18044.308972
+Total cell area:                 18589.032248
 Total area:                 undefined
 
 Hierarchical area distribution
@@ -36,8 +36,8 @@ Hierarchical area distribution
 Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
                                   Total       Total    national    national   boxes   Design
 --------------------------------  ----------  -------  ----------  ---------  ------  ---------
-fir                               18044.3090    100.0  13370.4146  4673.8944  0.0000  fir
+fir                               18589.0322    100.0  13836.8162  4752.2160  0.0000  fir
 --------------------------------  ----------  -------  ----------  ---------  ------  ---------
-Total                                                  13370.4146  4673.8944  0.0000
+Total                                                  13836.8162  4752.2160  0.0000
 
 1

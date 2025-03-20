@@ -1,0 +1,620 @@
+{
+    "PrevCompiledModules": {
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7387,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "checksum": 0,
+                "out": "objs/amcQw_d.o"
+            }
+        },
+        "udp_dff": {
+            "udp_dff": {
+                "bytes": 0,
+                "mod": "udp_dff",
+                "mode": 4,
+                "out": "objs/udps/exIG1.o"
+            }
+        },
+        "fir_tb": {
+            "aMFWh_d": {
+                "bytes": 143448,
+                "mod": "fir_tb",
+                "out": "aMFWh_d.o",
+                "mode": 4,
+                "checksum": 0,
+                "archive": "archive.38/_5780_archive_1.a"
+            }
+        },
+        "bram32": {
+            "JDmIf_d": {
+                "bytes": 11648,
+                "mod": "bram32",
+                "out": "JDmIf_d.o",
+                "mode": 4,
+                "checksum": 0,
+                "archive": "archive.38/_5780_archive_1.a"
+            }
+        },
+        "udp_mux2": {
+            "udp_mux2": {
+                "bytes": 0,
+                "mod": "udp_mux2",
+                "mode": 4,
+                "out": "objs/udps/U7Vwg.o"
+            }
+        }
+    },
+    "MlibObjs": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 121887,
+        "archive": "archive.38/_5780_archive_1.a"
+    },
+    "NameTable": {
+        "fir_tb": [
+            "fir_tb",
+            "aMFWh",
+            "module",
+            1
+        ],
+        "fir": [
+            "fir",
+            "ujt4N",
+            "module",
+            4
+        ],
+        "AOI222XL": [
+            "AOI222XL",
+            "G6ems",
+            "module",
+            16
+        ],
+        "bram32": [
+            "bram32",
+            "JDmIf",
+            "module",
+            2
+        ],
+        "ADDFXL": [
+            "ADDFXL",
+            "D1wVr",
+            "module",
+            6
+        ],
+        "CMPR42X1": [
+            "CMPR42X1",
+            "f8nqa",
+            "module",
+            5
+        ],
+        "AND3XL": [
+            "AND3XL",
+            "FW8wG",
+            "module",
+            8
+        ],
+        "DFFSRXL": [
+            "DFFSRXL",
+            "pCvbK",
+            "module",
+            28
+        ],
+        "NAND4BXL": [
+            "NAND4BXL",
+            "APaqQ",
+            "module",
+            37
+        ],
+        "ADDHXL": [
+            "ADDHXL",
+            "xAVMd",
+            "module",
+            7
+        ],
+        "MX2XL": [
+            "MX2XL",
+            "Vacbq",
+            "module",
+            30
+        ],
+        "udp_mux2": [
+            "udp_mux2",
+            "U7Vwg",
+            "udp",
+            61
+        ],
+        "AO21XL": [
+            "AO21XL",
+            "LYkvL",
+            "module",
+            9
+        ],
+        "XOR3XL": [
+            "XOR3XL",
+            "Nnn6h",
+            "module",
+            60
+        ],
+        "XNOR2XL": [
+            "XNOR2XL",
+            "rpKsx",
+            "module",
+            58
+        ],
+        "AO2B2XL": [
+            "AO2B2XL",
+            "eQUpD",
+            "module",
+            11
+        ],
+        "AOI32XL": [
+            "AOI32XL",
+            "RctLc",
+            "module",
+            22
+        ],
+        "AOI21BX1": [
+            "AOI21BX1",
+            "QACWC",
+            "module",
+            14
+        ],
+        "AO22XL": [
+            "AO22XL",
+            "t0Hd0",
+            "module",
+            10
+        ],
+        "AOI211XL": [
+            "AOI211XL",
+            "Wk0jI",
+            "module",
+            12
+        ],
+        "AOI2BB2XL": [
+            "AOI2BB2XL",
+            "m7gfL",
+            "module",
+            20
+        ],
+        "CLKBUFX1": [
+            "CLKBUFX1",
+            "DxFAw",
+            "module",
+            24
+        ],
+        "DFFRQXL": [
+            "DFFRQXL",
+            "N95Kp",
+            "module",
+            26
+        ],
+        "AOI221XL": [
+            "AOI221XL",
+            "BUsfE",
+            "module",
+            15
+        ],
+        "OA21XL": [
+            "OA21XL",
+            "nYeNM",
+            "module",
+            43
+        ],
+        "AOI21XL": [
+            "AOI21XL",
+            "t8sfL",
+            "module",
+            13
+        ],
+        "NAND2BXL": [
+            "NAND2BXL",
+            "B7bZD",
+            "module",
+            33
+        ],
+        "AOI22XL": [
+            "AOI22XL",
+            "Kx8dR",
+            "module",
+            17
+        ],
+        "AOI2B1XL": [
+            "AOI2B1XL",
+            "TaEc5",
+            "module",
+            18
+        ],
+        "INVXL": [
+            "INVXL",
+            "FsUsG",
+            "module",
+            29
+        ],
+        "AOI2BB1XL": [
+            "AOI2BB1XL",
+            "uZF5n",
+            "module",
+            19
+        ],
+        "AOI31X1": [
+            "AOI31X1",
+            "ywNeR",
+            "module",
+            21
+        ],
+        "DFFSXL": [
+            "DFFSXL",
+            "JJ4Yn",
+            "module",
+            27
+        ],
+        "CLKAND2X4": [
+            "CLKAND2X4",
+            "aEJK1",
+            "module",
+            23
+        ],
+        "DFFRXL": [
+            "DFFRXL",
+            "D0Gi6",
+            "module",
+            25
+        ],
+        "NOR3XL": [
+            "NOR3XL",
+            "qsiak",
+            "module",
+            40
+        ],
+        "MXI2XL": [
+            "MXI2XL",
+            "Jacfd",
+            "module",
+            31
+        ],
+        "NAND2XL": [
+            "NAND2XL",
+            "C4bJV",
+            "module",
+            32
+        ],
+        "OAI221XL": [
+            "OAI221XL",
+            "GYQvg",
+            "module",
+            46
+        ],
+        "NAND3XL": [
+            "NAND3XL",
+            "zJkFY",
+            "module",
+            34
+        ],
+        "NAND3BXL": [
+            "NAND3BXL",
+            "YFzvB",
+            "module",
+            35
+        ],
+        "OAI32XL": [
+            "OAI32XL",
+            "A3I3t",
+            "module",
+            54
+        ],
+        "NAND4XL": [
+            "NAND4XL",
+            "RaaAR",
+            "module",
+            36
+        ],
+        "NOR2XL": [
+            "NOR2XL",
+            "UiF6Q",
+            "module",
+            38
+        ],
+        "NOR2BXL": [
+            "NOR2BXL",
+            "kQMYW",
+            "module",
+            39
+        ],
+        "NOR3BXL": [
+            "NOR3BXL",
+            "yEYNK",
+            "module",
+            41
+        ],
+        "NOR4XL": [
+            "NOR4XL",
+            "Bxps4",
+            "module",
+            42
+        ],
+        "OR4XL": [
+            "OR4XL",
+            "kHJ20",
+            "module",
+            57
+        ],
+        "OAI211XL": [
+            "OAI211XL",
+            "i85VS",
+            "module",
+            44
+        ],
+        "OAI2BB2XL": [
+            "OAI2BB2XL",
+            "eKshN",
+            "module",
+            52
+        ],
+        "OAI21XL": [
+            "OAI21XL",
+            "nqk2t",
+            "module",
+            45
+        ],
+        "OAI22XL": [
+            "OAI22XL",
+            "z4Vhc",
+            "module",
+            47
+        ],
+        "OAI2B11XL": [
+            "OAI2B11XL",
+            "RchZy",
+            "module",
+            48
+        ],
+        "OAI2B1XL": [
+            "OAI2B1XL",
+            "f9N6m",
+            "module",
+            49
+        ],
+        "OAI2BB1XL": [
+            "OAI2BB1XL",
+            "Hevxk",
+            "module",
+            51
+        ],
+        "OAI2B2XL": [
+            "OAI2B2XL",
+            "Imu1K",
+            "module",
+            50
+        ],
+        "OAI31XL": [
+            "OAI31XL",
+            "jIuBP",
+            "module",
+            53
+        ],
+        "OR2XL": [
+            "OR2XL",
+            "Ljmab",
+            "module",
+            55
+        ],
+        "OR3XL": [
+            "OR3XL",
+            "DF2I0",
+            "module",
+            56
+        ],
+        "XOR2XL": [
+            "XOR2XL",
+            "QZEIi",
+            "module",
+            59
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module",
+            3
+        ],
+        "udp_dff": [
+            "udp_dff",
+            "exIG1",
+            "udp",
+            62
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {
+        "udp_mux2": "objs/udps/U7Vwg.o",
+        "udp_dff": "objs/udps/exIG1.o"
+    },
+    "PEModules": [],
+    "stat": {
+        "ru_self_end": {
+            "ru_maxrss_kb": 80864,
+            "ru_utime_sec": 0.97598600000000002,
+            "ru_majflt": 0,
+            "ru_minflt": 32901,
+            "ru_stime_sec": 0.15463099999999999,
+            "ru_nvcsw": 465,
+            "ru_nivcsw": 697
+        },
+        "outputSizePerQuad": 152.24717361003562,
+        "ru_self_cgstart": {
+            "ru_maxrss_kb": 71108,
+            "ru_utime_sec": 0.69103199999999998,
+            "ru_majflt": 0,
+            "ru_minflt": 28075,
+            "ru_stime_sec": 0.093682000000000001,
+            "ru_nvcsw": 318,
+            "ru_nivcsw": 557
+        },
+        "nMops": 13985,
+        "ru_childs_cgstart": {
+            "ru_maxrss_kb": 22088,
+            "ru_utime_sec": 0.034856999999999999,
+            "ru_majflt": 0,
+            "ru_minflt": 10231,
+            "ru_stime_sec": 0.078745999999999997,
+            "ru_nvcsw": 105,
+            "ru_nivcsw": 34
+        },
+        "totalObjSize": 983060,
+        "mopSpeed": 49078.096815626377,
+        "CodeGen(%)": 29.196525359994922,
+        "nQuads": 6457,
+        "ru_childs_end": {
+            "ru_maxrss_kb": 22496,
+            "ru_utime_sec": 0.034856999999999999,
+            "ru_majflt": 0,
+            "ru_minflt": 10806,
+            "ru_stime_sec": 0.088349999999999998,
+            "ru_nvcsw": 110,
+            "ru_nivcsw": 36
+        },
+        "quadSpeed": 22659.797721737541,
+        "mop/quad": 2.1658665014712715,
+        "Frontend(%)": 70.803474640005078,
+        "peak_mem_kb": 248412
+    },
+    "Misc": {
+        "archive_dir": "archive.38",
+        "default_output_dir": "csrc",
+        "cwd": "/home/u110/u110022124/SOC/labfir_TA/sim",
+        "csrc": "csrc",
+        "csrc_abs": "/home/u110/u110022124/SOC/labfir_TA/sim/csrc",
+        "daidir": "simv.daidir",
+        "daidir_abs": "/home/u110/u110022124/SOC/labfir_TA/sim/simv.daidir"
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "fir_tb",
+        "fir_tb",
+        "fir",
+        "fir",
+        "bram32",
+        "bram32",
+        "CMPR42X1",
+        "CMPR42X1",
+        "ADDFXL",
+        "ADDFXL",
+        "ADDHXL",
+        "ADDHXL",
+        "AND3XL",
+        "AND3XL",
+        "AO21XL",
+        "AO21XL",
+        "AO22XL",
+        "AO22XL",
+        "AO2B2XL",
+        "AO2B2XL",
+        "AOI211XL",
+        "AOI211XL",
+        "AOI21XL",
+        "AOI21XL",
+        "AOI21BX1",
+        "AOI21BX1",
+        "AOI221XL",
+        "AOI221XL",
+        "AOI222XL",
+        "AOI222XL",
+        "AOI22XL",
+        "AOI22XL",
+        "AOI2B1XL",
+        "AOI2B1XL",
+        "AOI2BB1XL",
+        "AOI2BB1XL",
+        "AOI2BB2XL",
+        "AOI2BB2XL",
+        "AOI31X1",
+        "AOI31X1",
+        "AOI32XL",
+        "AOI32XL",
+        "CLKAND2X4",
+        "CLKAND2X4",
+        "CLKBUFX1",
+        "CLKBUFX1",
+        "DFFRXL",
+        "DFFRXL",
+        "DFFRQXL",
+        "DFFRQXL",
+        "DFFSXL",
+        "DFFSXL",
+        "DFFSRXL",
+        "DFFSRXL",
+        "INVXL",
+        "INVXL",
+        "MX2XL",
+        "MX2XL",
+        "MXI2XL",
+        "MXI2XL",
+        "NAND2XL",
+        "NAND2XL",
+        "NAND2BXL",
+        "NAND2BXL",
+        "NAND3XL",
+        "NAND3XL",
+        "NAND3BXL",
+        "NAND3BXL",
+        "NAND4XL",
+        "NAND4XL",
+        "NAND4BXL",
+        "NAND4BXL",
+        "NOR2XL",
+        "NOR2XL",
+        "NOR2BXL",
+        "NOR2BXL",
+        "NOR3XL",
+        "NOR3XL",
+        "NOR3BXL",
+        "NOR3BXL",
+        "NOR4XL",
+        "NOR4XL",
+        "OA21XL",
+        "OA21XL",
+        "OAI211XL",
+        "OAI211XL",
+        "OAI21XL",
+        "OAI21XL",
+        "OAI221XL",
+        "OAI221XL",
+        "OAI22XL",
+        "OAI22XL",
+        "OAI2B11XL",
+        "OAI2B11XL",
+        "OAI2B1XL",
+        "OAI2B1XL",
+        "OAI2B2XL",
+        "OAI2B2XL",
+        "OAI2BB1XL",
+        "OAI2BB1XL",
+        "OAI2BB2XL",
+        "OAI2BB2XL",
+        "OAI31XL",
+        "OAI31XL",
+        "OAI32XL",
+        "OAI32XL",
+        "OR2XL",
+        "OR2XL",
+        "OR3XL",
+        "OR3XL",
+        "OR4XL",
+        "OR4XL",
+        "XNOR2XL",
+        "XNOR2XL",
+        "XOR2XL",
+        "XOR2XL",
+        "XOR3XL",
+        "XOR3XL"
+    ],
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileProcesses": [
+        "cgproc.5780.json"
+    ],
+    "CompileStatus": "Successful"
+}

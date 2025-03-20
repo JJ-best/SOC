@@ -1,0 +1,124 @@
+0 
+37
++define+SDF
++itf+/usr/cad/synopsys/vcs/2017.12/linux64/lib/vcsdp_lite.tab
++neg_tchk
++nospecify
++v2k
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/usr/cad/synopsys/vcs/2017.12/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /usr/cad/synopsys/vcs/2017.12/linux64/lib/libvirsim.so /usr/cad/synopsys/vcs/2017.12/linux64/lib/liberrorinf.so /usr/cad/synopsys/vcs/2017.12/linux64/lib/libsnpsmalloc.so /usr/cad/synopsys/vcs/2017.12/linux64/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/usr/cad/synopsys/vcs/2017.12/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=/usr/cad/synopsys/verdi/2019.06/share/PLI/VCS/LINUX64/pli.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/usr/cad/synopsys/vcs/2017.12/include
+-P
+-Xvcs_run_simv=1
+-debug_acc
+-fsdb
+-full64
+-gen_obj
+-picarchive
+-v
+../hdl/bram32.v
+../syn/netlist/fir_syn.v
+/usr/cad/synopsys/vcs/2017.12/linux64/bin/vcs1
+/usr/cad/synopsys/verdi/2019.06/share/PLI/VCS/LINUX64/verdi.tab
+/usr/cadtool/ee5216/CBDK_TSMC90GUTM_Arm_f1.0/CIC/Verilog/tsmc090.v
+tb.v
+67
+sysc_uni_pwd=/home/u110/u110022124/SOC/labfir_TA/sim
+mraarch=linux_64
+installdir=/usr/cadtool/synopsys/hspice/U-2023.03-SP1/hspice
+XDG_SESSION_ID=17881
+XDG_RUNTIME_DIR=/run/user/23163
+VMR_MODE_FLAG=64
+VERDI_HOME=/usr/cad/synopsys/verdi/2019.06
+VENDOR=unknown
+VCS_MODE_FLAG=64
+VCS_HOME=/usr/cad/synopsys/vcs/2017.12
+VCS_DEPTH=0
+VCS_CC=gcc
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/usr/cad/synopsys/vcs/2017.12/linux64
+TMIARCH=RH_64
+SYN_MAN_DIR=/usr/cad/synopsys/vcs/2017.12/doc/man
+SYNTHESIS=/usr/cad/synopsys/synthesis/cur
+SSH_TTY=/dev/pts/19
+SSH_CONNECTION=140.114.24.31 43830 140.114.24.116 22
+SSH_CLIENT=140.114.24.31 43830 22
+SPAPI_AHDL_INCLUDE=/usr/cadtool/synopsys/hspice/U-2023.03-SP1/hspice/include
+SNPS_VCS_CLANG_PATH=/fs/src/interfaces/LLVM_Project/QSCM/opt/llvm-3.9.1/linux64
+SNPS_PLATFORM=linux64
+SNPS_64=1
+SHLIB_PATH=/usr/cad/synopsys/verdi/2019.06/etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/2019.06/share/PLI/lib/LINUX64/:/usr/cad/synopsys/verdi/2019.06/share/PLI/VCS/LINUX64/:
+SG_HTML_BROWSER=/usr/bin/mozilla
+SC_HLPPATH=/usr/cad/synopsys/laker/cur
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+REMOTEHOST=daisy
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+PRIMETIME=/usr/cad/synopsys/primetime/cur
+OVA_UUM=0
+OSTYPE=linux
+OA_HOME=/usr/cad/cadence/INNOVUS/INNOVUS_20.10.000/oa_v22.60.028
+MGC_TMPDIR=/tmp
+MGC_LOCATION_MAP=NO_MAP
+MGC_HOME=/usr/cad/mentor/calibre/cur
+MFLAGS=
+MAKELEVEL=1
+MAKEFLAGS=
+Laker_TCL_ToolBox=1
+Laker_TCL_L3=1
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+HSP_SIGMA_AMP=/usr/cadtool/synopsys/hspice/U-2023.03-SP1/hspice/linux64/python/AVA/ava
+HSP_HOME=/usr/cadtool/synopsys/hspice/U-2023.03-SP1/hspice
+HSP_GCC_VERSION=9.2.0
+HSP_GCC=/usr/cadtool/synopsys/hspice/U-2023.03-SP1/hspice/GNU/linux64/gcc/bin/gcc -m64 
+HOSTTYPE=x86_64-linux
+GROUP=u110
+DESIGNWARE_HOME=/usr/cadtool/cad/synopsys/dw_home/cur
+CVS_RSH=ssh
+CMIARCH=RH_64
+CDS_Netlisting_Mode=Analog
+CDS_LOAD_ENV=CSF
+CDS_AUTO_64BIT=NONE
+CDPL_HOME=/usr/cadtool/synopsys/hspice/U-2023.03-SP1/hspice/cdpl
+CDN_SYNTH_ROOT=/usr/cad/cadence/GENUS/cur/tools
+CALIBRE_HOME=/usr/cad/mentor/calibre/cur
+ARCH=linux64
+0
+8
+1742472415 ../syn/netlist/fir_syn.sdf
+1126312956 /usr/cadtool/ee5216/CBDK_TSMC90GUTM_Arm_f1.0/CIC/Verilog/tsmc090.v
+1126312956 /usr/cadtool/ee5216/CBDK_TSMC90GUTM_Arm_f1.0/CIC/Verilog/tsmc090.v
+1742186734 ../hdl/bram32.v
+1742472414 ../syn/netlist/fir_syn.v
+1742293346 tb.v
+1558867316 /usr/cad/synopsys/verdi/2019.06/share/PLI/VCS/LINUX64/verdi.tab
+1510893143 /usr/cad/synopsys/vcs/2017.12/linux64/lib/vcsdp_lite.tab
+5
+0 
+1510894036 /usr/cad/synopsys/vcs/2017.12/linux64/lib/libvirsim.so
+1510893223 /usr/cad/synopsys/vcs/2017.12/linux64/lib/liberrorinf.so
+1510893206 /usr/cad/synopsys/vcs/2017.12/linux64/lib/libsnpsmalloc.so
+1510893451 /usr/cad/synopsys/vcs/2017.12/linux64/lib/libvfs.so
+1742472435 simv.daidir

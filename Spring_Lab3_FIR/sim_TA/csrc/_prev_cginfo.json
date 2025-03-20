@@ -1,0 +1,149 @@
+{
+    "MlibObjs": {},
+    "PrevCompiledModules": {
+        "fir_tb": {
+            "aMFWh_d": {
+                "archive": "archive.37/_21642_archive_1.a",
+                "out": "aMFWh_d.o",
+                "bytes": 87238,
+                "mod": "fir_tb",
+                "mode": 4,
+                "checksum": 0
+            }
+        },
+        "bram32": {
+            "JDmIf_d": {
+                "archive": "archive.37/_21642_archive_1.a",
+                "out": "JDmIf_d.o",
+                "bytes": 11648,
+                "mod": "bram32",
+                "mode": 4,
+                "checksum": 0
+            }
+        },
+        "udp_dff": {
+            "udp_dff": {
+                "out": "objs/udps/exIG1.o",
+                "bytes": 0,
+                "mod": "udp_dff",
+                "mode": 4
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "out": "objs/amcQw_d.o",
+                "bytes": 7387,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "checksum": 0
+            }
+        },
+        "udp_mux2": {
+            "udp_mux2": {
+                "out": "objs/udps/U7Vwg.o",
+                "bytes": 0,
+                "mod": "udp_mux2",
+                "mode": 4
+            }
+        }
+    },
+    "NameTable": {
+        "fir_tb": [
+            "fir_tb",
+            "aMFWh",
+            "module",
+            1
+        ],
+        "bram32": [
+            "bram32",
+            "JDmIf",
+            "module",
+            2
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module",
+            3
+        ]
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "fir_tb",
+        "fir_tb",
+        "bram32",
+        "bram32"
+    ],
+    "SIMBData": {
+        "archive": "archive.37/_21642_archive_1.a",
+        "bytes": 117550,
+        "out": "amcQwB.o"
+    },
+    "CompileStrategy": "fullobj",
+    "stat": {
+        "mop/quad": 2.5731830078518221,
+        "ru_self_cgstart": {
+            "ru_utime_sec": 0.20561499999999999,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.089266999999999999,
+            "ru_maxrss_kb": 66140,
+            "ru_minflt": 25806,
+            "ru_nvcsw": 328,
+            "ru_nivcsw": 57
+        },
+        "ru_childs_cgstart": {
+            "ru_utime_sec": 0.030859000000000001,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.089599999999999999,
+            "ru_maxrss_kb": 17732,
+            "ru_minflt": 10231,
+            "ru_nvcsw": 83,
+            "ru_nivcsw": 34
+        },
+        "ru_childs_end": {
+            "ru_utime_sec": 0.033003999999999999,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.097105999999999998,
+            "ru_maxrss_kb": 18152,
+            "ru_minflt": 10806,
+            "ru_nvcsw": 88,
+            "ru_nivcsw": 37
+        },
+        "peak_mem_kb": 244016,
+        "nMops": 12781,
+        "nQuads": 4967,
+        "ru_self_end": {
+            "ru_utime_sec": 0.372562,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.110024,
+            "ru_maxrss_kb": 79208,
+            "ru_minflt": 30282,
+            "ru_nvcsw": 450,
+            "ru_nivcsw": 71
+        },
+        "CodeGen(%)": 44.810528180544452,
+        "totalObjSize": 272646,
+        "mopSpeed": 76557.230737898848,
+        "quadSpeed": 29751.957207976182,
+        "outputSizePerQuad": 54.891483793034027,
+        "Frontend(%)": 55.189471819455548
+    },
+    "CurCompileUdps": {},
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileStatus": "Successful",
+    "PEModules": [],
+    "Misc": {
+        "cwd": "/home/u110/u110022124/SOC/labfir_TA/sim",
+        "archive_dir": "archive.37",
+        "daidir": "simv.daidir",
+        "csrc": "csrc",
+        "csrc_abs": "/home/u110/u110022124/SOC/labfir_TA/sim/csrc",
+        "daidir_abs": "/home/u110/u110022124/SOC/labfir_TA/sim/simv.daidir",
+        "default_output_dir": "csrc"
+    },
+    "CompileProcesses": [
+        "cgproc.21642.json"
+    ]
+}

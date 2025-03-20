@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Mon Mar 17 01:55:21 2025
+# Created by write_sdc on Thu Mar 20 20:06:55 2025
 
 ###################################################################
 set sdc_version 2.1
@@ -338,7 +338,7 @@ set_max_fanout 6 [get_ports {data_Do[0]}]
 set_max_fanout 6 [get_ports axis_clk]
 set_max_fanout 6 [get_ports axis_rst_n]
 set_ideal_network [get_ports axis_clk]
-create_clock [get_ports axis_clk]  -period 10  -waveform {0 5}
+create_clock [get_ports axis_clk]  -period 5  -waveform {0 2.5}
 set_clock_latency 0.5  [get_clocks axis_clk]
 set_clock_uncertainty 0.1  [get_clocks axis_clk]
 set_input_delay -clock axis_clk  1  [get_ports awvalid]

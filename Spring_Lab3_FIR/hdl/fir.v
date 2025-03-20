@@ -1,6 +1,4 @@
-// version 11: AXI Lite Asynchrounous
-
-
+// version 12
 
 module fir 
 #(  parameter pADDR_WIDTH = 12,
@@ -195,7 +193,6 @@ wire fresh;
 //--------------------------//
 
 //-----ss_tlast control-----//
-reg [(pDATA_WIDTH-1):0] ss_tdata_tmp;
 reg ss_last_state;
 reg ss_last_state_next;
 //--------------------------//
@@ -555,24 +552,14 @@ end
 assign tap_addr_generator_next = tap_addr_generator + 12'h4;
 
 //-----AXI Stream-----//
-assign data_WE = ((ss_tready && ss_tvalid) | ap_ctrl == 3'b100)? 4'b1111 : 4'b0000; //handshake: ss_tready = ss_tready && ss_tvalid
+assign data_WE = ((ss_tready && ss_tvalid) | ap_state == AP_FRESH)? 4'b1111 : 4'b0000; //handshake: ss_tready = ss_tready && ss_tvalid
 assign data_EN = 1;
 assign data_Di = (ap_ctrl == 3'b100)? 0 : ss_tdata;
 //when BRAM getting address, it will access(r/w) memory in next clock.
-assign data_A = (ap_ctrl == 3'b100)? data_addr_f[6:0] : (ss_state == SS_DONE) ? data_addr_w[6:0] : data_addr_r[6:0]; //generate by address generator
+assign data_A = (ap_state == AP_FRESH)? data_addr_f[6:0] : (ss_state == SS_DONE) ? data_addr_w[6:0] : data_addr_r[6:0]; //generate by address generator
 
 assign tap_A_max = (coef_length - 1) * 4; //address for bram
 assign addr_max = 12'h80 + (coef_length - 1) * 4;
-
-always @(posedge axis_clk or negedge axis_rst_n) begin
-  if (!axis_rst_n) begin
-    ss_tdata_tmp <= 0;
-  end else if (ss_state == SS_WRITE) begin
-    ss_tdata_tmp <= ss_tdata_tmp;
-  end else begin
-    ss_tdata_tmp <= ss_tdata;
-  end
-end
 
 //-----data RAM address generator 0x40-0xFF-----//
 //-----axi_stream: write adress generate(FIFO, write data_RAM)-----//
@@ -672,7 +659,7 @@ always @(*) begin
   SS_PROC: begin //4
     if (tap_A == tap_A_max && mode_state == SM_MODE) begin
       ss_state_next = SS_HOLD;
-    end else if (tap_A == tap_A_max) begin
+    end else if (tap_A == tap_A_max && mode_state == SS_MODE) begin
       ss_state_next = SS_DONE;
     end else begin
       ss_state_next = SS_PROC;
@@ -807,7 +794,7 @@ end
 assign sm_tvalid = (sm_state == SM_DONE | sm_state == SM_LATCH)? 1 : 0;
 assign sm_tdata = ((sm_state == SM_DONE))? y : y_latch;
 assign sm_tlast = (data_cnt == data_length)? 1 : 0;
-//since data_cnt count how many ss_tready(how many Xn input)
+//since data_cnt count how many sm_tdata output
 
 //-----FSM of output latch-----//
 assign y_latch_en = ((mode_state == SS_MODE && sm_state == SM_DONE) | (mode_state == SM_MODE && sm_tvalid & sm_tready))? 1 : 0;//latch enable
