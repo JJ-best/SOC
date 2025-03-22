@@ -501,7 +501,7 @@ always @(*) begin
     end
   end
   AP_DONE: begin //10, reset to init when AXI-Stream input is done
-    if (araddr == 12'h0 && (rvalid & rready) && (!ss_tlast)) begin
+    if (araddr == 12'h0 && (rvalid & rready)) begin
       ap_state_next = AP_INIT;
       ap_ctrl_fir = 3'b100;
     end else begin
@@ -558,7 +558,7 @@ assign data_Di = (ap_ctrl == 3'b100)? 0 : ss_tdata;
 //when BRAM getting address, it will access(r/w) memory in next clock.
 assign data_A = (ap_state == AP_FRESH)? data_addr_f[6:0] : (ss_state == SS_DONE) ? data_addr_w[6:0] : data_addr_r[6:0]; //generate by address generator
 
-assign tap_A_max = (coef_length - 1) * 4; //address for bram
+assign tap_A_max = (coef_length - 1) * 4; //tap_A = addr[6:0]
 assign addr_max = 12'h80 + (coef_length - 1) * 4;
 
 //-----data RAM address generator 0x40-0xFF-----//
@@ -570,8 +570,6 @@ always @(posedge axis_clk or negedge axis_rst_n) begin
     data_addr_w <= 12'h80;
   end else if (ss_state == SS_WRITE) begin
     data_addr_w <= data_addr_w_next; //+4
-  end else if (ap_ctrl == 3'b100) begin
-    data_addr_w <= data_addr_w_next;
   end else begin
     data_addr_w <= data_addr_w; //maintain
   end
@@ -584,7 +582,7 @@ assign fresh = (data_addr_f == 12'h80 + 4 * (32-1))? 1:0;
 always @(posedge axis_clk or negedge axis_rst_n) begin
   if (!axis_rst_n) begin
     data_addr_f <= 12'h80;
-  end else if (ap_state == AP_INIT) begin//previos version: AP_DONE
+  end else if (ap_state == AP_INIT) begin
     data_addr_f <= 12'h80; 
   end else if (ap_state == AP_FRESH) begin
     data_addr_f <= data_addr_f_next;//+4
@@ -592,7 +590,7 @@ always @(posedge axis_clk or negedge axis_rst_n) begin
     data_addr_f <= data_addr_f; //maintain
   end
 end
-assign  data_addr_f_next = (data_addr_f != 12'h80 + 4 * (32-1))? data_addr_f + 12'h4 : 12'h80;
+assign  data_addr_f_next = (!fresh)? data_addr_f + 12'h4 : 12'h80;
 //-------------------------//
 
 //-----axi_stream: read address generate-----//
@@ -608,7 +606,7 @@ always @(posedge axis_clk or negedge axis_rst_n) begin
   end
 end
 //if read to addr 12'h80, switch to the end of bram addr
-assign data_addr_r_next = (data_addr_r == 12'h80)? 12'h80 + (coef_length - 1) * 4 : data_addr_r - 12'h4;
+assign data_addr_r_next = (data_addr_r == 12'h80)? addr_max : data_addr_r - 12'h4;
 //-------------------------------------------//
 
 //-----core engine-----//
@@ -792,7 +790,7 @@ end
 //-----------------------------//
 
 assign sm_tvalid = (sm_state == SM_DONE | sm_state == SM_LATCH)? 1 : 0;
-assign sm_tdata = ((sm_state == SM_DONE))? y : y_latch;
+assign sm_tdata = (((sm_state == SM_DONE) & (ss_state != SS_HOLD)))? y : y_latch;
 assign sm_tlast = (data_cnt == data_length)? 1 : 0;
 //since data_cnt count how many sm_tdata output
 

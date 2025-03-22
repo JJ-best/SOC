@@ -6,14 +6,13 @@ Report : timing
         -max_paths 5
 Design : fir
 Version: R-2020.09-SP5
-Date   : Thu Mar 20 20:06:55 2025
+Date   : Fri Mar 21 15:50:03 2025
 ****************************************
 
 Operating Conditions: slow   Library: slow
 Wire Load Model Mode: top
 
-  Startpoint: data_Do[17]
-              (input port clocked by axis_clk)
+  Startpoint: tap_Do[6] (input port clocked by axis_clk)
   Endpoint: x_mul_h_reg[31]
             (rising edge-triggered flip-flop clocked by axis_clk)
   Path Group: axis_clk
@@ -24,36 +23,41 @@ Wire Load Model Mode: top
   clock axis_clk (rise edge)               0.00       0.00
   clock network delay (ideal)              0.50       0.50
   input external delay                     1.00       1.50 r
-  data_Do[17] (in)                         0.00       1.50 r
-  U2412/Y (AND2X2)                         0.16       1.66 r
-  U2438/Y (XOR2X1)                         0.14       1.80 f
-  U2440/Y (NOR2X2)                         0.23       2.03 r
-  U1142/Y (NAND2X1)                        0.09       2.12 f
-  U1405/Y (OAI21XL)                        0.06       2.18 r
-  U1404/Y (XOR2XL)                         0.10       2.28 f
-  U1403/CO (ADDHXL)                        0.12       2.40 f
-  U1279/CO (ADDHXL)                        0.10       2.50 f
-  U1153/CO (ADDHXL)                        0.11       2.61 f
-  U2715/CO (ADDFXL)                        0.17       2.78 f
-  U2716/CO (ADDFXL)                        0.21       2.99 f
-  mult_x_32/U423/CO (CMPR42X1)             0.43       3.42 f
-  mult_x_32/U418/S (CMPR42X1)              0.42       3.84 f
-  U2974/Y (OR2X2)                          0.10       3.94 f
-  U1519/Y (AOI21XL)                        0.08       4.02 r
-  U1517/Y (OAI21XL)                        0.10       4.12 f
-  U2975/Y (AOI21X1)                        0.09       4.21 r
-  U1513/Y (OAI21XL)                        0.09       4.30 f
-  U1509/Y (AOI21XL)                        0.13       4.43 r
-  U2976/Y (OAI21X1)                        0.09       4.52 f
-  U2977/Y (AOI21X1)                        0.09       4.61 r
-  U1507/Y (OAI21XL)                        0.09       4.70 f
-  U1503/Y (AOI21XL)                        0.13       4.82 r
-  U2978/Y (OAI21X1)                        0.08       4.90 f
-  U3101/CO (ADDFXL)                        0.17       5.08 f
-  U3160/Y (XOR2X1)                         0.09       5.17 r
-  U3375/Y (AND2X2)                         0.09       5.26 r
-  x_mul_h_reg[31]/D (DFFSRXL)              0.00       5.26 r
-  data arrival time                                   5.26
+  tap_Do[6] (in)                           0.00       1.50 r
+  U2584/Y (NOR2BX1)                        0.43       1.93 r
+  U1669/Y (NOR2XL)                         0.15       2.08 f
+  U1573/Y (NOR2XL)                         0.12       2.20 r
+  U1119/Y (NAND2XL)                        0.07       2.27 f
+  U2628/Y (OAI21X1)                        0.08       2.36 r
+  U2629/Y (INVX1)                          0.07       2.43 f
+  U1391/Y (XNOR2XL)                        0.20       2.63 r
+  U2631/Y (OAI21XL)                        0.12       2.75 f
+  U1764/Y (XOR2XL)                         0.11       2.86 r
+  U2638/S (ADDFXL)                         0.32       3.17 f
+  U1535/Y (OR2XL)                          0.17       3.34 f
+  U1533/Y (AOI21XL)                        0.09       3.43 r
+  U1532/Y (OAI21XL)                        0.09       3.52 f
+  U2640/Y (AOI21X1)                        0.09       3.60 r
+  U1468/Y (OAI21XL)                        0.09       3.69 f
+  U1757/Y (AOI21XL)                        0.12       3.81 r
+  U1458/Y (OAI21X1)                        0.08       3.89 f
+  U1518/Y (AOI21X1)                        0.09       3.98 r
+  U1452/Y (OAI21XL)                        0.08       4.06 f
+  U1447/Y (AOI21XL)                        0.13       4.19 r
+  U2643/Y (OAI21X2)                        0.07       4.26 f
+  U2644/Y (AOI21X1)                        0.09       4.35 r
+  U1512/Y (OAI21X1)                        0.08       4.43 f
+  U1508/Y (AOI21X1)                        0.09       4.52 r
+  U1506/Y (OAI21XL)                        0.10       4.61 f
+  U2645/Y (AOI21X1)                        0.10       4.71 r
+  U1504/Y (OAI21X1)                        0.08       4.79 f
+  U1502/Y (AOI21X1)                        0.09       4.89 r
+  U2646/Y (OAI21X1)                        0.07       4.96 f
+  U3145/CO (ADDFHX2)                       0.12       5.08 f
+  U2780/Y (XOR2X1)                         0.08       5.16 r
+  U2782/Y (NOR2BX2)                        0.09       5.25 r
+  x_mul_h_reg[31]/D (DFFSRXL)              0.00       5.25 r
+  data arrival time                                   5.25
 
   clock axis_clk (rise edge)               5.00       5.00
   clock network delay (ideal)              0.50       5.50
@@ -63,13 +67,12 @@ Wire Load Model Mode: top
   data required time                                  5.26
   -----------------------------------------------------------
   data required time                                  5.26
-  data arrival time                                  -5.26
+  data arrival time                                  -5.25
   -----------------------------------------------------------
   slack (MET)                                         0.00
 
 
-  Startpoint: data_Do[17]
-              (input port clocked by axis_clk)
+  Startpoint: tap_Do[6] (input port clocked by axis_clk)
   Endpoint: x_mul_h_reg[30]
             (rising edge-triggered flip-flop clocked by axis_clk)
   Path Group: axis_clk
@@ -80,51 +83,55 @@ Wire Load Model Mode: top
   clock axis_clk (rise edge)               0.00       0.00
   clock network delay (ideal)              0.50       0.50
   input external delay                     1.00       1.50 r
-  data_Do[17] (in)                         0.00       1.50 r
-  U2412/Y (AND2X2)                         0.16       1.66 r
-  U2438/Y (XOR2X1)                         0.14       1.80 f
-  U2440/Y (NOR2X2)                         0.23       2.03 r
-  U1142/Y (NAND2X1)                        0.09       2.12 f
-  U1405/Y (OAI21XL)                        0.06       2.18 r
-  U1404/Y (XOR2XL)                         0.10       2.28 f
-  U1403/CO (ADDHXL)                        0.12       2.40 f
-  U1279/CO (ADDHXL)                        0.10       2.50 f
-  U1153/CO (ADDHXL)                        0.11       2.61 f
-  U2715/CO (ADDFXL)                        0.17       2.78 f
-  U2716/CO (ADDFXL)                        0.21       2.99 f
-  mult_x_32/U423/CO (CMPR42X1)             0.43       3.42 f
-  mult_x_32/U418/S (CMPR42X1)              0.42       3.84 f
-  U2974/Y (OR2X2)                          0.10       3.94 f
-  U1519/Y (AOI21XL)                        0.08       4.02 r
-  U1517/Y (OAI21XL)                        0.10       4.12 f
-  U2975/Y (AOI21X1)                        0.09       4.21 r
-  U1513/Y (OAI21XL)                        0.09       4.30 f
-  U1509/Y (AOI21XL)                        0.13       4.43 r
-  U2976/Y (OAI21X1)                        0.09       4.52 f
-  U2977/Y (AOI21X1)                        0.09       4.61 r
-  U1507/Y (OAI21XL)                        0.09       4.70 f
-  U1503/Y (AOI21XL)                        0.13       4.82 r
-  U2978/Y (OAI21X1)                        0.08       4.90 f
-  U3101/S (ADDFXL)                         0.17       5.08 f
-  U1036/Y (AND2XL)                         0.10       5.18 f
-  x_mul_h_reg[30]/D (DFFSRXL)              0.00       5.18 f
-  data arrival time                                   5.18
+  tap_Do[6] (in)                           0.00       1.50 r
+  U2584/Y (NOR2BX1)                        0.43       1.93 r
+  U1669/Y (NOR2XL)                         0.15       2.08 f
+  U1573/Y (NOR2XL)                         0.12       2.20 r
+  U1119/Y (NAND2XL)                        0.07       2.27 f
+  U2628/Y (OAI21X1)                        0.08       2.36 r
+  U2629/Y (INVX1)                          0.07       2.43 f
+  U1391/Y (XNOR2XL)                        0.20       2.63 r
+  U2631/Y (OAI21XL)                        0.12       2.75 f
+  U1764/Y (XOR2XL)                         0.11       2.86 r
+  U2638/S (ADDFXL)                         0.32       3.17 f
+  U1535/Y (OR2XL)                          0.17       3.34 f
+  U1533/Y (AOI21XL)                        0.09       3.43 r
+  U1532/Y (OAI21XL)                        0.09       3.52 f
+  U2640/Y (AOI21X1)                        0.09       3.60 r
+  U1468/Y (OAI21XL)                        0.09       3.69 f
+  U1757/Y (AOI21XL)                        0.12       3.81 r
+  U1458/Y (OAI21X1)                        0.08       3.89 f
+  U1518/Y (AOI21X1)                        0.09       3.98 r
+  U1452/Y (OAI21XL)                        0.08       4.06 f
+  U1447/Y (AOI21XL)                        0.13       4.19 r
+  U2643/Y (OAI21X2)                        0.07       4.26 f
+  U2644/Y (AOI21X1)                        0.09       4.35 r
+  U1512/Y (OAI21X1)                        0.08       4.43 f
+  U1508/Y (AOI21X1)                        0.09       4.52 r
+  U1506/Y (OAI21XL)                        0.10       4.61 f
+  U2645/Y (AOI21X1)                        0.10       4.71 r
+  U1504/Y (OAI21X1)                        0.08       4.79 f
+  U1502/Y (AOI21X1)                        0.09       4.89 r
+  U2646/Y (OAI21X1)                        0.07       4.96 f
+  U3145/S (ADDFHX2)                        0.16       5.12 r
+  U1990/Y (NOR2BXL)                        0.08       5.20 r
+  x_mul_h_reg[30]/D (DFFSRXL)              0.00       5.20 r
+  data arrival time                                   5.20
 
   clock axis_clk (rise edge)               5.00       5.00
   clock network delay (ideal)              0.50       5.50
   clock uncertainty                       -0.10       5.40
   x_mul_h_reg[30]/CK (DFFSRXL)             0.00       5.40 r
-  library setup time                      -0.13       5.27
-  data required time                                  5.27
+  library setup time                      -0.15       5.25
+  data required time                                  5.25
   -----------------------------------------------------------
-  data required time                                  5.27
-  data arrival time                                  -5.18
+  data required time                                  5.25
+  data arrival time                                  -5.20
   -----------------------------------------------------------
-  slack (MET)                                         0.09
+  slack (MET)                                         0.06
 
 
-  Startpoint: data_Do[17]
-              (input port clocked by axis_clk)
+  Startpoint: tap_Do[6] (input port clocked by axis_clk)
   Endpoint: x_mul_h_reg[29]
             (rising edge-triggered flip-flop clocked by axis_clk)
   Path Group: axis_clk
@@ -135,111 +142,54 @@ Wire Load Model Mode: top
   clock axis_clk (rise edge)               0.00       0.00
   clock network delay (ideal)              0.50       0.50
   input external delay                     1.00       1.50 r
-  data_Do[17] (in)                         0.00       1.50 r
-  U2412/Y (AND2X2)                         0.16       1.66 r
-  U2438/Y (XOR2X1)                         0.14       1.80 f
-  U2440/Y (NOR2X2)                         0.23       2.03 r
-  U1142/Y (NAND2X1)                        0.09       2.12 f
-  U1405/Y (OAI21XL)                        0.06       2.18 r
-  U1404/Y (XOR2XL)                         0.10       2.28 f
-  U1403/CO (ADDHXL)                        0.12       2.40 f
-  U1279/CO (ADDHXL)                        0.10       2.50 f
-  U1153/CO (ADDHXL)                        0.11       2.61 f
-  U2715/CO (ADDFXL)                        0.17       2.78 f
-  U2716/CO (ADDFXL)                        0.21       2.99 f
-  mult_x_32/U423/CO (CMPR42X1)             0.43       3.42 f
-  mult_x_32/U418/S (CMPR42X1)              0.42       3.84 f
-  U2974/Y (OR2X2)                          0.10       3.94 f
-  U1519/Y (AOI21XL)                        0.08       4.02 r
-  U1517/Y (OAI21XL)                        0.10       4.12 f
-  U2975/Y (AOI21X1)                        0.09       4.21 r
-  U1513/Y (OAI21XL)                        0.09       4.30 f
-  U1509/Y (AOI21XL)                        0.13       4.43 r
-  U2976/Y (OAI21X1)                        0.09       4.52 f
-  U2977/Y (AOI21X1)                        0.09       4.61 r
-  U1507/Y (OAI21XL)                        0.09       4.70 f
-  U1503/Y (AOI21XL)                        0.13       4.82 r
-  U1830/Y (XOR2XL)                         0.13       4.95 r
-  U1037/Y (AND2XL)                         0.11       5.06 r
-  x_mul_h_reg[29]/D (DFFSRXL)              0.00       5.06 r
-  data arrival time                                   5.06
+  tap_Do[6] (in)                           0.00       1.50 r
+  U2584/Y (NOR2BX1)                        0.43       1.93 r
+  U1669/Y (NOR2XL)                         0.15       2.08 f
+  U1573/Y (NOR2XL)                         0.12       2.20 r
+  U1119/Y (NAND2XL)                        0.07       2.27 f
+  U2628/Y (OAI21X1)                        0.08       2.36 r
+  U2629/Y (INVX1)                          0.07       2.43 f
+  U1391/Y (XNOR2XL)                        0.20       2.63 r
+  U2631/Y (OAI21XL)                        0.12       2.75 f
+  U1764/Y (XOR2XL)                         0.11       2.86 r
+  U2638/S (ADDFXL)                         0.32       3.17 f
+  U1535/Y (OR2XL)                          0.17       3.34 f
+  U1533/Y (AOI21XL)                        0.09       3.43 r
+  U1532/Y (OAI21XL)                        0.09       3.52 f
+  U2640/Y (AOI21X1)                        0.09       3.60 r
+  U1468/Y (OAI21XL)                        0.09       3.69 f
+  U1757/Y (AOI21XL)                        0.12       3.81 r
+  U1458/Y (OAI21X1)                        0.08       3.89 f
+  U1518/Y (AOI21X1)                        0.09       3.98 r
+  U1452/Y (OAI21XL)                        0.08       4.06 f
+  U1447/Y (AOI21XL)                        0.13       4.19 r
+  U2643/Y (OAI21X2)                        0.07       4.26 f
+  U2644/Y (AOI21X1)                        0.09       4.35 r
+  U1512/Y (OAI21X1)                        0.08       4.43 f
+  U1508/Y (AOI21X1)                        0.09       4.52 r
+  U1506/Y (OAI21XL)                        0.10       4.61 f
+  U2645/Y (AOI21X1)                        0.10       4.71 r
+  U1504/Y (OAI21X1)                        0.08       4.79 f
+  U1502/Y (AOI21X1)                        0.09       4.89 r
+  U1858/Y (XOR2XL)                         0.12       5.01 r
+  U1991/Y (NOR2BXL)                        0.10       5.11 r
+  x_mul_h_reg[29]/D (DFFSRXL)              0.00       5.11 r
+  data arrival time                                   5.11
 
   clock axis_clk (rise edge)               5.00       5.00
   clock network delay (ideal)              0.50       5.50
   clock uncertainty                       -0.10       5.40
   x_mul_h_reg[29]/CK (DFFSRXL)             0.00       5.40 r
-  library setup time                      -0.14       5.26
-  data required time                                  5.26
+  library setup time                      -0.15       5.25
+  data required time                                  5.25
   -----------------------------------------------------------
-  data required time                                  5.26
-  data arrival time                                  -5.06
+  data required time                                  5.25
+  data arrival time                                  -5.11
   -----------------------------------------------------------
-  slack (MET)                                         0.20
+  slack (MET)                                         0.14
 
 
-  Startpoint: x_mul_h_reg[1]
-              (rising edge-triggered flip-flop clocked by axis_clk)
-  Endpoint: y_reg[31] (rising edge-triggered flip-flop clocked by axis_clk)
-  Path Group: axis_clk
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock axis_clk (rise edge)               0.00       0.00
-  clock network delay (ideal)              0.50       0.50
-  x_mul_h_reg[1]/CK (DFFSRXL)              0.00       0.50 r
-  x_mul_h_reg[1]/Q (DFFSRXL)               0.27       0.77 f
-  U3393/Y (OR2XL)                          0.15       0.92 f
-  U3398/Y (AOI21XL)                        0.11       1.03 r
-  U1911/Y (OAI21XL)                        0.10       1.13 f
-  U1910/Y (AOI21XL)                        0.12       1.25 r
-  U1567/Y (OAI21XL)                        0.10       1.34 f
-  U1908/Y (AOI21XL)                        0.12       1.46 r
-  U1557/Y (OAI21XL)                        0.10       1.56 f
-  U1556/Y (AOI21XL)                        0.12       1.68 r
-  U1906/Y (OAI21XL)                        0.10       1.78 f
-  U1905/Y (AOI21XL)                        0.12       1.90 r
-  U1566/Y (OAI21XL)                        0.10       2.00 f
-  U1903/Y (AOI21XL)                        0.12       2.12 r
-  U1565/Y (OAI21XL)                        0.10       2.22 f
-  U1901/Y (AOI21XL)                        0.12       2.34 r
-  U1564/Y (OAI21XL)                        0.10       2.43 f
-  U1899/Y (AOI21XL)                        0.12       2.55 r
-  U1555/Y (OAI21XL)                        0.10       2.65 f
-  U1554/Y (AOI21XL)                        0.12       2.77 r
-  U1898/Y (OAI21XL)                        0.10       2.87 f
-  U1897/Y (AOI21XL)                        0.12       2.99 r
-  U1563/Y (OAI21XL)                        0.10       3.09 f
-  U1896/Y (AOI21XL)                        0.12       3.21 r
-  U1553/Y (OAI21XL)                        0.09       3.30 f
-  U3453/CO (ADDFXL)                        0.19       3.49 f
-  U3451/CO (ADDFXL)                        0.18       3.67 f
-  U3449/CO (ADDFXL)                        0.18       3.85 f
-  U3448/CO (ADDFXL)                        0.18       4.03 f
-  U3447/CO (ADDFXL)                        0.18       4.21 f
-  U3446/CO (ADDFXL)                        0.18       4.39 f
-  U3445/CO (ADDFXL)                        0.18       4.58 f
-  U3444/CO (ADDFXL)                        0.17       4.75 f
-  U1956/Y (XOR2XL)                         0.07       4.82 r
-  U1955/Y (NOR2BXL)                        0.10       4.92 r
-  y_reg[31]/D (DFFRQXL)                    0.00       4.92 r
-  data arrival time                                   4.92
-
-  clock axis_clk (rise edge)               5.00       5.00
-  clock network delay (ideal)              0.50       5.50
-  clock uncertainty                       -0.10       5.40
-  y_reg[31]/CK (DFFRQXL)                   0.00       5.40 r
-  library setup time                      -0.16       5.24
-  data required time                                  5.24
-  -----------------------------------------------------------
-  data required time                                  5.24
-  data arrival time                                  -4.92
-  -----------------------------------------------------------
-  slack (MET)                                         0.33
-
-
-  Startpoint: data_Do[17]
-              (input port clocked by axis_clk)
+  Startpoint: tap_Do[6] (input port clocked by axis_clk)
   Endpoint: x_mul_h_reg[28]
             (rising edge-triggered flip-flop clocked by axis_clk)
   Path Group: axis_clk
@@ -250,45 +200,110 @@ Wire Load Model Mode: top
   clock axis_clk (rise edge)               0.00       0.00
   clock network delay (ideal)              0.50       0.50
   input external delay                     1.00       1.50 r
-  data_Do[17] (in)                         0.00       1.50 r
-  U2412/Y (AND2X2)                         0.16       1.66 r
-  U2438/Y (XOR2X1)                         0.14       1.80 f
-  U2440/Y (NOR2X2)                         0.23       2.03 r
-  U1142/Y (NAND2X1)                        0.09       2.12 f
-  U1405/Y (OAI21XL)                        0.06       2.18 r
-  U1404/Y (XOR2XL)                         0.10       2.28 f
-  U1403/CO (ADDHXL)                        0.12       2.40 f
-  U1279/CO (ADDHXL)                        0.10       2.50 f
-  U1153/CO (ADDHXL)                        0.11       2.61 f
-  U2715/CO (ADDFXL)                        0.17       2.78 f
-  U2716/CO (ADDFXL)                        0.21       2.99 f
-  mult_x_32/U423/CO (CMPR42X1)             0.43       3.42 f
-  mult_x_32/U418/S (CMPR42X1)              0.42       3.84 f
-  U2974/Y (OR2X2)                          0.10       3.94 f
-  U1519/Y (AOI21XL)                        0.08       4.02 r
-  U1517/Y (OAI21XL)                        0.10       4.12 f
-  U2975/Y (AOI21X1)                        0.09       4.21 r
-  U1513/Y (OAI21XL)                        0.09       4.30 f
-  U1509/Y (AOI21XL)                        0.13       4.43 r
-  U2976/Y (OAI21X1)                        0.09       4.52 f
-  U2977/Y (AOI21X1)                        0.09       4.61 r
-  U1507/Y (OAI21XL)                        0.09       4.70 f
-  U1832/Y (XNOR2XL)                        0.12       4.81 r
-  U1038/Y (AND2XL)                         0.11       4.92 r
-  x_mul_h_reg[28]/D (DFFSRXL)              0.00       4.92 r
-  data arrival time                                   4.92
+  tap_Do[6] (in)                           0.00       1.50 r
+  U2584/Y (NOR2BX1)                        0.43       1.93 r
+  U1669/Y (NOR2XL)                         0.15       2.08 f
+  U1573/Y (NOR2XL)                         0.12       2.20 r
+  U1119/Y (NAND2XL)                        0.07       2.27 f
+  U2628/Y (OAI21X1)                        0.08       2.36 r
+  U2629/Y (INVX1)                          0.07       2.43 f
+  U1391/Y (XNOR2XL)                        0.20       2.63 r
+  U2631/Y (OAI21XL)                        0.12       2.75 f
+  U1764/Y (XOR2XL)                         0.11       2.86 r
+  U2638/S (ADDFXL)                         0.32       3.17 f
+  U1535/Y (OR2XL)                          0.17       3.34 f
+  U1533/Y (AOI21XL)                        0.09       3.43 r
+  U1532/Y (OAI21XL)                        0.09       3.52 f
+  U2640/Y (AOI21X1)                        0.09       3.60 r
+  U1468/Y (OAI21XL)                        0.09       3.69 f
+  U1757/Y (AOI21XL)                        0.12       3.81 r
+  U1458/Y (OAI21X1)                        0.08       3.89 f
+  U1518/Y (AOI21X1)                        0.09       3.98 r
+  U1452/Y (OAI21XL)                        0.08       4.06 f
+  U1447/Y (AOI21XL)                        0.13       4.19 r
+  U2643/Y (OAI21X2)                        0.07       4.26 f
+  U2644/Y (AOI21X1)                        0.09       4.35 r
+  U1512/Y (OAI21X1)                        0.08       4.43 f
+  U1508/Y (AOI21X1)                        0.09       4.52 r
+  U1506/Y (OAI21XL)                        0.10       4.61 f
+  U2645/Y (AOI21X1)                        0.10       4.71 r
+  U1504/Y (OAI21X1)                        0.08       4.79 f
+  U1861/Y (XNOR2XL)                        0.11       4.90 r
+  U1992/Y (NOR2BXL)                        0.10       5.01 r
+  x_mul_h_reg[28]/D (DFFSRXL)              0.00       5.01 r
+  data arrival time                                   5.01
 
   clock axis_clk (rise edge)               5.00       5.00
   clock network delay (ideal)              0.50       5.50
   clock uncertainty                       -0.10       5.40
   x_mul_h_reg[28]/CK (DFFSRXL)             0.00       5.40 r
-  library setup time                      -0.14       5.26
-  data required time                                  5.26
+  library setup time                      -0.15       5.25
+  data required time                                  5.25
   -----------------------------------------------------------
-  data required time                                  5.26
-  data arrival time                                  -4.92
+  data required time                                  5.25
+  data arrival time                                  -5.01
   -----------------------------------------------------------
-  slack (MET)                                         0.34
+  slack (MET)                                         0.24
+
+
+  Startpoint: y_reg[1] (rising edge-triggered flip-flop clocked by axis_clk)
+  Endpoint: y_reg[31] (rising edge-triggered flip-flop clocked by axis_clk)
+  Path Group: axis_clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock axis_clk (rise edge)               0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  y_reg[1]/CK (DFFRQXL)                    0.00       0.50 r
+  y_reg[1]/Q (DFFRQXL)                     0.29       0.79 f
+  U3450/Y (OR2XL)                          0.16       0.95 f
+  U3455/Y (AOI21XL)                        0.11       1.06 r
+  U1942/Y (OAI21XL)                        0.10       1.16 f
+  U1553/Y (AOI21XL)                        0.12       1.28 r
+  U1940/Y (OAI21XL)                        0.10       1.38 f
+  U1939/Y (AOI21XL)                        0.12       1.50 r
+  U1568/Y (OAI21XL)                        0.10       1.60 f
+  U1825/Y (AOI21XL)                        0.12       1.72 r
+  U1826/Y (OAI21XL)                        0.10       1.82 f
+  U1552/Y (AOI21XL)                        0.12       1.94 r
+  U1936/Y (OAI21XL)                        0.10       2.03 f
+  U1935/Y (AOI21XL)                        0.12       2.15 r
+  U1567/Y (OAI21XL)                        0.10       2.25 f
+  U1933/Y (AOI21XL)                        0.12       2.37 r
+  U1566/Y (OAI21XL)                        0.10       2.47 f
+  U1931/Y (AOI21XL)                        0.12       2.59 r
+  U1565/Y (OAI21XL)                        0.10       2.69 f
+  U1551/Y (AOI21XL)                        0.12       2.81 r
+  U1930/Y (OAI21XL)                        0.10       2.90 f
+  U1929/Y (AOI21XL)                        0.12       3.02 r
+  U1550/Y (OAI21XL)                        0.10       3.12 f
+  U1549/Y (AOI21XL)                        0.12       3.24 r
+  U1928/Y (OAI21XL)                        0.09       3.34 f
+  U3509/CO (ADDFXL)                        0.19       3.52 f
+  U3507/CO (ADDFXL)                        0.18       3.70 f
+  U3505/CO (ADDFXL)                        0.18       3.89 f
+  U3504/CO (ADDFXL)                        0.18       4.07 f
+  U3503/CO (ADDFXL)                        0.18       4.25 f
+  U3502/CO (ADDFXL)                        0.18       4.43 f
+  U3501/CO (ADDFXL)                        0.18       4.61 f
+  U3500/CO (ADDFXL)                        0.17       4.78 f
+  U2015/Y (XOR2XL)                         0.07       4.86 r
+  U2014/Y (NOR2BXL)                        0.10       4.95 r
+  y_reg[31]/D (DFFRQXL)                    0.00       4.95 r
+  data arrival time                                   4.95
+
+  clock axis_clk (rise edge)               5.00       5.00
+  clock network delay (ideal)              0.50       5.50
+  clock uncertainty                       -0.10       5.40
+  y_reg[31]/CK (DFFRQXL)                   0.00       5.40 r
+  library setup time                      -0.15       5.25
+  data required time                                  5.25
+  -----------------------------------------------------------
+  data required time                                  5.25
+  data arrival time                                  -4.95
+  -----------------------------------------------------------
+  slack (MET)                                         0.29
 
 
 1

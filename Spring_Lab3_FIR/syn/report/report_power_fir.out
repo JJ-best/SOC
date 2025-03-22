@@ -5,7 +5,7 @@ Report : power
         -analysis_effort low
 Design : fir
 Version: R-2020.09-SP5
-Date   : Thu Mar 20 20:06:55 2025
+Date   : Fri Mar 21 15:50:03 2025
 ****************************************
 
 
@@ -31,5 +31,5 @@ Power-specific unit information :
                                        Switch   Int      Leak     Total
 Hierarchy                              Power    Power    Power    Power    %
 --------------------------------------------------------------------------------
-fir                                       0.639    0.636 6.08e+07    1.336 100.0
+fir                                       0.629    0.628 6.08e+07    1.318 100.0
 1

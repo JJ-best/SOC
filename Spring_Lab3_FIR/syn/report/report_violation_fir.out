@@ -4,7 +4,7 @@ Report : constraint
         -all_violators
 Design : fir
 Version: R-2020.09-SP5
-Date   : Thu Mar 20 20:06:55 2025
+Date   : Fri Mar 21 15:50:03 2025
 ****************************************
 
 
@@ -13,6 +13,8 @@ Date   : Thu Mar 20 20:06:55 2025
                              Required        Actual
    Net                      Capacitance    Capacitance       Slack
    -----------------------------------------------------------------
+   DP_OP_102J1_123_3167/n206
+                                0.99           1.00          -0.01  (VIOLATED)
    arready                      0.99           1.00          -0.01  (VIOLATED)
    awready                      0.99           1.00          -0.01  (VIOLATED)
    data_A[0]                    0.99           1.00          -0.01  (VIOLATED)
@@ -138,7 +140,6 @@ Date   : Thu Mar 20 20:06:55 2025
    tap_A[3]                     0.99           1.00          -0.01  (VIOLATED)
    tap_A[4]                     0.99           1.00          -0.01  (VIOLATED)
    tap_A[5]                     0.99           1.00          -0.01  (VIOLATED)
-   tap_A[6]                     0.99           1.00          -0.01  (VIOLATED)
    tap_A[7]                     0.99           1.00          -0.01  (VIOLATED)
    tap_A[8]                     0.99           1.00          -0.01  (VIOLATED)
    tap_A[9]                     0.99           1.00          -0.01  (VIOLATED)
@@ -182,17 +183,16 @@ Date   : Thu Mar 20 20:06:55 2025
    tap_WE[2]                    0.99           1.00          -0.01  (VIOLATED)
    tap_WE[3]                    0.99           1.00          -0.01  (VIOLATED)
    wready                       0.99           1.00          -0.01  (VIOLATED)
-   n2970                        0.11           0.11           0.00  (VIOLATED: increase significant digits)
 
    -----------------------------------------------------------------
-   Total                      170                -2.44  
+   Total                      169                -2.44  
 
    max_leakage_power
 
                              Required        Actual
    Design                   Leakage Power  Leakage Power     Slack
    -----------------------------------------------------------------
-   fir                          0.00       74158568.00    -74158568.00
+   fir                          0.00       74052640.00    -74052640.00
                                                                     (VIOLATED)
 
 
