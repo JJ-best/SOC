@@ -11,6 +11,6 @@ The data path of my design is shown in the following figure, and FSM determines 
 ![](./images/fir_block.jpg)
 
 ## Report
-
+https://hackmd.io/@VYAZ71eHRa2w0l_K52GM0g/Bk8MYys3kg
 ## Error correction 
 https://hackmd.io/@VYAZ71eHRa2w0l_K52GM0g/SJPAovHnkl
