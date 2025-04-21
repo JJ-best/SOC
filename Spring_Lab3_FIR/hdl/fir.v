@@ -610,8 +610,8 @@ assign data_addr_r_next = (data_addr_r == 12'h80)? addr_max : data_addr_r - 12'h
 //-------------------------------------------//
 
 //-----core engine-----//
-assign data_x = ((mode_state == SM_MODE && sm_state == SM_WAIT1) | ss_state == SS_PROC | ss_state == SS_PROC1 | (ss_state == SS_DONE && sm_state == SM_WAIT1))? data_Do : 0;//在write, process時
-assign tap_h = ((mode_state == SM_MODE && sm_state == SM_WAIT1) | ss_state == SS_PROC | ss_state == SS_PROC1 | (ss_state == SS_DONE && sm_state == SM_WAIT1))? tap_Do : 0;
+assign data_x = (ss_state == SS_PROC | ss_state == SS_PROC1 | (ss_state == SS_DONE && sm_state == SM_WAIT1) | (mode_state == SM_MODE && sm_state == SM_WAIT1))? data_Do : 0;//在write, process時
+assign tap_h = (ss_state == SS_PROC | ss_state == SS_PROC1 | (ss_state == SS_DONE && sm_state == SM_WAIT1) | (mode_state == SM_MODE && sm_state == SM_WAIT1))? tap_Do : 0;
 assign x_mul_h_next = data_x * tap_h;
 assign y_next = x_mul_h + y;
 
