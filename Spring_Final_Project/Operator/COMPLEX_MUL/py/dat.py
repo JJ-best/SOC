@@ -15,7 +15,7 @@ def write_complex_float_file(filename, real_list, imag_list):
     assert len(real_list) == len(imag_list)
     with open(filename, 'w') as f:
         for r, i in zip(real_list, imag_list):
-            f.write(f"{r:.17e} {i:.17e}\n")  # 兩個浮點數空格分隔
+            f.write(f"{r:.1e} {i:.1e}\n")  # 兩個浮點數空格分隔
 
 # 產生 200 筆 complex number（每個包含 2 個浮點數）
 N = 1000

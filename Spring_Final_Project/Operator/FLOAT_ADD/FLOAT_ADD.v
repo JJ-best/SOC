@@ -151,7 +151,9 @@ wire LSB_2 = pip2_mantissa2_shifted[52];
 wire Guard_2 = pip2_mantissa2_shifted[51];
 wire Round_2 = pip2_mantissa2_shifted[50];
 wire Sticky_2 = |pip2_mantissa2_shifted[49:0];
-wire round_up1 = Guard_1 & (Round_1 | Sticky_1 | LSB_1);
+wire round_up1 = Guard_1 & (Round_1 | Sticky_1 | LSB_1) ;
+//wire round_up1 = (Guard_1 & (Round_1 | Sticky_1)) | (Guard_1 & ~Round_1 & ~Sticky_1 & LSB_1);
+//wire round_up2 = (Guard_2 & (Round_2 | Sticky_2)) | (Guard_2 & ~Round_2 & ~Sticky_2 & LSB_2);
 wire round_up2 = Guard_2 & (Round_2 | Sticky_2 | LSB_2);
 always @(*) begin
   if (round_up1) begin
@@ -347,169 +349,215 @@ always @(posedge clk or negedge rstn) begin
 end
 //---------------------------//
 
-
 //-----pipeline stage: 8-----//
-//binary tree find leading one
-//ex: 0.0001011 => 1.011
+// normalize using leading-one detection (pure RTL style)
 reg pip8_sign;
 reg pip8_valid;
-reg [(EXPONENT_LEN-1):0]pip8_exponent;
-reg [(MANTISSA_LEN-1):0]pip8_mantissa;
+reg [(EXPONENT_LEN-1):0] pip8_exponent;
+reg [(MANTISSA_LEN-1):0] pip8_mantissa;
+
 assign ready = pip8_valid;
-reg [5:0]lod_pos; //position of leading one
-//mask first 12 bit, only check mantissa part's loading one
-wire [63:0]pip7_result = {1'b0, 11'b0, pip7_mantissa[(MANTISSA_LEN-1):0]};
-reg [(MANTISSA_LEN+1):0]pip8_mantissa_shift;
-reg signed [5:0]shift;
-//search leading one
+
+reg [MANTISSA_LEN+1:0] pip8_mantissa_shift;
+reg signed [5:0] shift;
+
+integer i;
+
+always @(*) begin
+  shift = 0;
+  for (i = MANTISSA_LEN - 1; i >= 0; i = i - 1) begin
+    if (pip7_mantissa[i] && shift == 0) begin
+      shift = MANTISSA_LEN - i;
+    end
+  end
+  pip8_mantissa_shift = pip7_mantissa << shift;
+end
+
 always @(posedge clk or negedge rstn) begin
   if (!rstn) begin
-    pip8_sign <= 0;
+    pip8_sign     <= 0;
+    pip8_valid    <= 0;
     pip8_exponent <= 0;
     pip8_mantissa <= 0;
-    pip8_valid <= 0;
   end else begin
-    pip8_sign <= pip7_sign;
+    pip8_sign  <= pip7_sign;
     pip8_valid <= pip7_valid;
+
     if (pip7_mantissa[MANTISSA_LEN] == 1'b1) begin
+      // Already normalized
       pip8_exponent <= pip7_exponent;
-      pip8_mantissa <= pip7_mantissa;
+      pip8_mantissa <= pip7_mantissa[MANTISSA_LEN-1:0];
     end else begin
+      // Subnormal: align to leading one
       pip8_exponent <= pip7_exponent - shift;
-      pip8_mantissa <= pip8_mantissa_shift;
+      pip8_mantissa <= pip8_mantissa_shift[MANTISSA_LEN-1:0];
     end
-    
   end
 end
 
-always @(*) begin
-  if (|pip7_result[63:32]) begin
-    lod_pos[5] = 1;
-    if (|pip7_result[63:48]) begin
-      lod_pos[4] = 1;
-      if (|pip7_result[63:56]) begin
-        lod_pos[3] = 1;
-        if (|pip7_result[63:60]) begin
-          lod_pos[2] = 1;
-          lod_pos[1:0] = (pip7_result[63] ? 2'd3 :
-                          pip7_result[62] ? 2'd2 :
-                          pip7_result[61] ? 2'd1 : 2'd0);
-        end else begin
-          lod_pos[2] = 0;
-          lod_pos[1:0] = (pip7_result[59] ? 2'd3 :
-                          pip7_result[58] ? 2'd2 :
-                          pip7_result[57] ? 2'd1 : 2'd0);
-        end
-      end else begin
-        lod_pos[3] = 0;
-        if (|pip7_result[55:52]) begin
-          lod_pos[2] = 1;
-          lod_pos[1:0] = (pip7_result[55] ? 2'd3 :
-                          pip7_result[54] ? 2'd2 :
-                          pip7_result[53] ? 2'd1 : 2'd0);
-        end else begin
-          lod_pos[2] = 0;
-          lod_pos[1:0] = (pip7_result[51] ? 2'd3 :
-                          pip7_result[50] ? 2'd2 :
-                          pip7_result[49] ? 2'd1 : 2'd0);
-        end
-      end
-    end else begin
-      lod_pos[4] = 0;
-      if (|pip7_result[47:40]) begin
-        lod_pos[3] = 1;
-        if (|pip7_result[47:44]) begin
-          lod_pos[2] = 1;
-          lod_pos[1:0] = (pip7_result[47] ? 2'd3 :
-                          pip7_result[46] ? 2'd2 :
-                          pip7_result[45] ? 2'd1 : 2'd0);
-        end else begin
-          lod_pos[2] = 0;
-          lod_pos[1:0] = (pip7_result[43] ? 2'd3 :
-                          pip7_result[42] ? 2'd2 :
-                          pip7_result[41] ? 2'd1 : 2'd0);
-        end
-      end else begin
-        lod_pos[3] = 0;
-        if (|pip7_result[39:36]) begin
-          lod_pos[2] = 1;
-          lod_pos[1:0] = (pip7_result[39] ? 2'd3 :
-                          pip7_result[38] ? 2'd2 :
-                          pip7_result[37] ? 2'd1 : 2'd0);
-        end else begin
-          lod_pos[2] = 0;
-          lod_pos[1:0] = (pip7_result[35] ? 2'd3 :
-                          pip7_result[34] ? 2'd2 :
-                          pip7_result[33] ? 2'd1 : 2'd0);
-        end
-      end
-    end
-  end else begin
-    lod_pos[5] = 0;
-    if (|pip7_result[31:16]) begin
-      lod_pos[4] = 1;
-      if (|pip7_result[31:24]) begin
-        lod_pos[3] = 1;
-        if (|pip7_result[31:28]) begin
-          lod_pos[2] = 1;
-          lod_pos[1:0] = (pip7_result[31] ? 2'd3 :
-                          pip7_result[30] ? 2'd2 :
-                          pip7_result[29] ? 2'd1 : 2'd0);
-        end else begin
-          lod_pos[2] = 0;
-          lod_pos[1:0] = (pip7_result[27] ? 2'd3 :
-                          pip7_result[26] ? 2'd2 :
-                          pip7_result[25] ? 2'd1 : 2'd0);
-        end
-      end else begin
-        lod_pos[3] = 0;
-        if (|pip7_result[23:20]) begin
-          lod_pos[2] = 1;
-          lod_pos[1:0] = (pip7_result[23] ? 2'd3 :
-                          pip7_result[22] ? 2'd2 :
-                          pip7_result[21] ? 2'd1 : 2'd0);
-        end else begin
-          lod_pos[2] = 0;
-          lod_pos[1:0] = (pip7_result[19] ? 2'd3 :
-                          pip7_result[18] ? 2'd2 :
-                          pip7_result[17] ? 2'd1 : 2'd0);
-        end
-      end
-    end else begin
-      lod_pos[4] = 0;
-      if (|pip7_result[15:8]) begin
-        lod_pos[3] = 1;
-        if (|pip7_result[15:12]) begin
-          lod_pos[2] = 1;
-          lod_pos[1:0] = (pip7_result[15] ? 2'd3 :
-                          pip7_result[14] ? 2'd2 :
-                          pip7_result[13] ? 2'd1 : 2'd0);
-        end else begin
-          lod_pos[2] = 0;
-          lod_pos[1:0] = (pip7_result[11] ? 2'd3 :
-                          pip7_result[10] ? 2'd2 :
-                          pip7_result[9]  ? 2'd1 : 2'd0);
-        end
-      end else begin
-        lod_pos[3] = 0;
-        if (|pip7_result[7:4]) begin
-          lod_pos[2] = 1;
-          lod_pos[1:0] = (pip7_result[7] ? 2'd3 :
-                          pip7_result[6] ? 2'd2 :
-                          pip7_result[5] ? 2'd1 : 2'd0);
-        end else begin
-          lod_pos[2] = 0;
-          lod_pos[1:0] = (pip7_result[3] ? 2'd3 :
-                          pip7_result[2] ? 2'd2 :
-                          pip7_result[1] ? 2'd1 :
-                          pip7_result[0] ? 2'd0 : 2'd0);
-        end
-      end
-    end
-  end
-  shift = MANTISSA_LEN - lod_pos;
-  pip8_mantissa_shift = pip7_mantissa << shift;
-end
+
+
+// //-----pipeline stage: 8-----//
+// //binary tree find leading one
+// //ex: 0.0001011 => 1.011
+// reg pip8_sign;
+// reg pip8_valid;
+// reg [(EXPONENT_LEN-1):0]pip8_exponent;
+// reg [(MANTISSA_LEN-1):0]pip8_mantissa;
+// assign ready = pip8_valid;
+// reg [5:0]lod_pos; //position of leading one
+// //mask first 12 bit, only check mantissa part's loading one
+// wire [63:0]pip7_result = {1'b0, 11'b0, pip7_mantissa[(MANTISSA_LEN-1):0]};
+// reg [(MANTISSA_LEN+1):0]pip8_mantissa_shift;
+// reg signed [5:0]shift;
+// //search leading one
+// always @(posedge clk or negedge rstn) begin
+//   if (!rstn) begin
+//     pip8_sign <= 0;
+//     pip8_exponent <= 0;
+//     pip8_mantissa <= 0;
+//     pip8_valid <= 0;
+//   end else begin
+//     pip8_sign <= pip7_sign;
+//     pip8_valid <= pip7_valid;
+//     if (pip7_mantissa[MANTISSA_LEN] == 1'b1) begin //dont need rounding
+//       pip8_exponent <= pip7_exponent;
+//       pip8_mantissa <= pip7_mantissa;
+//     end else begin
+//       pip8_exponent <= pip7_exponent - shift;
+//       pip8_mantissa <= pip8_mantissa_shift;
+//     end
+//   end
+// end
+
+// always @(*) begin
+//   if (|pip7_result[63:32]) begin
+//     lod_pos[5] = 1;
+//     if (|pip7_result[63:48]) begin
+//       lod_pos[4] = 1;
+//       if (|pip7_result[63:56]) begin
+//         lod_pos[3] = 1;
+//         if (|pip7_result[63:60]) begin
+//           lod_pos[2] = 1;
+//           lod_pos[1:0] = (pip7_result[63] ? 2'd3 :
+//                           pip7_result[62] ? 2'd2 :
+//                           pip7_result[61] ? 2'd1 : 2'd0);
+//         end else begin
+//           lod_pos[2] = 0;
+//           lod_pos[1:0] = (pip7_result[59] ? 2'd3 :
+//                           pip7_result[58] ? 2'd2 :
+//                           pip7_result[57] ? 2'd1 : 2'd0);
+//         end
+//       end else begin
+//         lod_pos[3] = 0;
+//         if (|pip7_result[55:52]) begin
+//           lod_pos[2] = 1;
+//           lod_pos[1:0] = (pip7_result[55] ? 2'd3 :
+//                           pip7_result[54] ? 2'd2 :
+//                           pip7_result[53] ? 2'd1 : 2'd0);
+//         end else begin
+//           lod_pos[2] = 0;
+//           lod_pos[1:0] = (pip7_result[51] ? 2'd3 :
+//                           pip7_result[50] ? 2'd2 :
+//                           pip7_result[49] ? 2'd1 : 2'd0);
+//         end
+//       end
+//     end else begin
+//       lod_pos[4] = 0;
+//       if (|pip7_result[47:40]) begin
+//         lod_pos[3] = 1;
+//         if (|pip7_result[47:44]) begin
+//           lod_pos[2] = 1;
+//           lod_pos[1:0] = (pip7_result[47] ? 2'd3 :
+//                           pip7_result[46] ? 2'd2 :
+//                           pip7_result[45] ? 2'd1 : 2'd0);
+//         end else begin
+//           lod_pos[2] = 0;
+//           lod_pos[1:0] = (pip7_result[43] ? 2'd3 :
+//                           pip7_result[42] ? 2'd2 :
+//                           pip7_result[41] ? 2'd1 : 2'd0);
+//         end
+//       end else begin
+//         lod_pos[3] = 0;
+//         if (|pip7_result[39:36]) begin
+//           lod_pos[2] = 1;
+//           lod_pos[1:0] = (pip7_result[39] ? 2'd3 :
+//                           pip7_result[38] ? 2'd2 :
+//                           pip7_result[37] ? 2'd1 : 2'd0);
+//         end else begin
+//           lod_pos[2] = 0;
+//           lod_pos[1:0] = (pip7_result[35] ? 2'd3 :
+//                           pip7_result[34] ? 2'd2 :
+//                           pip7_result[33] ? 2'd1 : 2'd0);
+//         end
+//       end
+//     end
+//   end else begin
+//     lod_pos[5] = 0;
+//     if (|pip7_result[31:16]) begin
+//       lod_pos[4] = 1;
+//       if (|pip7_result[31:24]) begin
+//         lod_pos[3] = 1;
+//         if (|pip7_result[31:28]) begin
+//           lod_pos[2] = 1;
+//           lod_pos[1:0] = (pip7_result[31] ? 2'd3 :
+//                           pip7_result[30] ? 2'd2 :
+//                           pip7_result[29] ? 2'd1 : 2'd0);
+//         end else begin
+//           lod_pos[2] = 0;
+//           lod_pos[1:0] = (pip7_result[27] ? 2'd3 :
+//                           pip7_result[26] ? 2'd2 :
+//                           pip7_result[25] ? 2'd1 : 2'd0);
+//         end
+//       end else begin
+//         lod_pos[3] = 0;
+//         if (|pip7_result[23:20]) begin
+//           lod_pos[2] = 1;
+//           lod_pos[1:0] = (pip7_result[23] ? 2'd3 :
+//                           pip7_result[22] ? 2'd2 :
+//                           pip7_result[21] ? 2'd1 : 2'd0);
+//         end else begin
+//           lod_pos[2] = 0;
+//           lod_pos[1:0] = (pip7_result[19] ? 2'd3 :
+//                           pip7_result[18] ? 2'd2 :
+//                           pip7_result[17] ? 2'd1 : 2'd0);
+//         end
+//       end
+//     end else begin
+//       lod_pos[4] = 0;
+//       if (|pip7_result[15:8]) begin
+//         lod_pos[3] = 1;
+//         if (|pip7_result[15:12]) begin
+//           lod_pos[2] = 1;
+//           lod_pos[1:0] = (pip7_result[15] ? 2'd3 :
+//                           pip7_result[14] ? 2'd2 :
+//                           pip7_result[13] ? 2'd1 : 2'd0);
+//         end else begin
+//           lod_pos[2] = 0;
+//           lod_pos[1:0] = (pip7_result[11] ? 2'd3 :
+//                           pip7_result[10] ? 2'd2 :
+//                           pip7_result[9]  ? 2'd1 : 2'd0);
+//         end
+//       end else begin
+//         lod_pos[3] = 0;
+//         if (|pip7_result[7:4]) begin
+//           lod_pos[2] = 1;
+//           lod_pos[1:0] = (pip7_result[7] ? 2'd3 :
+//                           pip7_result[6] ? 2'd2 :
+//                           pip7_result[5] ? 2'd1 : 2'd0);
+//         end else begin
+//           lod_pos[2] = 0;
+//           lod_pos[1:0] = (pip7_result[3] ? 2'd3 :
+//                           pip7_result[2] ? 2'd2 :
+//                           pip7_result[1] ? 2'd1 :
+//                           pip7_result[0] ? 2'd0 : 2'd0);
+//         end
+//       end
+//     end
+//   end
+//   shift = MANTISSA_LEN - lod_pos;
+//   pip8_mantissa_shift = pip7_mantissa << shift;
+// end
 
 
 //---------------------------//

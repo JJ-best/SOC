@@ -107,7 +107,9 @@ initial begin
     while (k < i) begin
         @(posedge clk);
         if (result !== golden_result[k]) begin
-            $display("❌ [Mismatch] Pattern %0d: result = %h, expected = %h", k, result, golden_result[k]);
+            $display("❌ [Mismatch] Pattern %0d:", k);
+            $display("result   = %h", result);
+            $display("expected = %h", golden_result[k]);
             errors = errors + 1;
         end else begin
             $display("✅ [Match] Pattern %0d: result = %h", k, result);

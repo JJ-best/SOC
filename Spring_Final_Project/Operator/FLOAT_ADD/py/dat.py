@@ -1,7 +1,7 @@
 # Author: Jesse
 import random
 
-def generate_large_floats(n, low_exp=-100, high_exp=100):
+def generate_large_floats(n, low_exp=-300, high_exp=300):
     floats = []
     for _ in range(n):
         base = random.uniform(1.0, 10.0)
@@ -14,12 +14,13 @@ def generate_large_floats(n, low_exp=-100, high_exp=100):
 def write_float_file(filename, data):
     with open(filename, 'w') as f:
         for num in data:
-            f.write(f"{num:.17e}\n")  # 保留高精度，避免誤差
+            f.write(f"{num:.10e}\n")  # 保留高精度，避免誤差
 
 # 產生資料
 N = 1000
-num1_data = generate_large_floats(N, -100, 100)
-num2_data = generate_large_floats(N, -100, 100)
+rangex = 0
+num1_data = generate_large_floats(N, -rangex, rangex)
+num2_data = generate_large_floats(N, -rangex, rangex)
 
 # 寫入檔案
 write_float_file("num1.dat", num1_data)
