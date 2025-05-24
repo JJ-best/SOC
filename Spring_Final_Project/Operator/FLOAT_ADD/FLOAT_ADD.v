@@ -48,6 +48,7 @@ end
 //---------------------------//
 
 //-----pipeline stage: 2-----//
+//add leadign one or zero
 reg pip2_sign1;
 reg pip2_sign2;
 reg pip2_valid;
@@ -170,6 +171,7 @@ end
 //---------------------------//
 
 //-----pipeline stage: 4-----//
+//place the mantissa number for next stage(add or sub)
 reg pip4_sign1;
 reg pip4_sign2;
 reg [(EXPONENT_LEN-1):0]pip4_exponent1;
@@ -222,6 +224,8 @@ end
 //---------------------------//
 
 //-----pipeline stage: 5-----//
+//calculate the add and sub of mantissa
+//if pip5_complement = 1 means the pip5_mantissa is negative
 reg pip5_sign;
 reg pip5_valid;
 reg [(EXPONENT_LEN-1):0]pip5_exponent;
@@ -296,6 +300,7 @@ end
 //---------------------------//
 
 //-----pipeline stage: 6-----//
+//if pip5_mantissa is negative, reverse to positive
 reg pip6_sign;
 reg pip6_valid;
 reg [(EXPONENT_LEN-1):0]pip6_exponent;
@@ -320,7 +325,7 @@ end
 //---------------------------//
 
 //-----pipeline stage: 7-----//
-//normalize, large num
+//normalize, 10.00101 * 2^33 => 1.000101 * 2^34
 reg pip7_sign;
 reg pip7_valid;
 reg [(EXPONENT_LEN-1):0]pip7_exponent;
@@ -350,7 +355,8 @@ end
 //---------------------------//
 
 //-----pipeline stage: 8-----//
-// normalize using leading-one detection (pure RTL style)
+// normalize using leading-one detection
+//0.00000101 * 2^22 => 1.01000000 * 2^16
 reg pip8_sign;
 reg pip8_valid;
 reg [(EXPONENT_LEN-1):0] pip8_exponent;
@@ -394,8 +400,6 @@ always @(posedge clk or negedge rstn) begin
     end
   end
 end
-
-
 
 // //-----pipeline stage: 8-----//
 // //binary tree find leading one
