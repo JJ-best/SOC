@@ -18,7 +18,7 @@ def write_float_file(filename, data):
 
 # 產生資料
 N = 1000
-rangex = 0
+rangex = 100
 num1_data = generate_large_floats(N, -rangex, rangex)
 num2_data = generate_large_floats(N, -rangex, rangex)
 
