@@ -95,8 +95,10 @@ mul mul2(
 assign mul_result[1] = (mode[1] == 1'b1 )? mul_result_com[1]:mul_result_int[1];
 assign a_result = (mode[1] == 1'b1)? a_reg[(FFT_MUL_LATENCY-1)]:a_reg[(NTT_MUL_LATENCY-1)];
 
-fp_add   fp_add_01( .in_A( a_result ) , .in_B( mul_result[0] )     , .clk( clk ) , .rst_n( rst_n )  , .in_valid( mul_out_valid[0] )  , .result( cmul_result[0] ) , .out_valid( cmul_valid_o[0] ));
-fp_add   fp_add_02( .in_A( a_result ) , .in_B( mul_result[1] )     , .clk( clk ) , .rst_n( rst_n )  , .in_valid( mul_out_valid[1] )  , .result( cmul_result[1] ) , .out_valid( cmul_valid_o[1] ));
+fp_add   fp_add_01( .in_A( a_result ) , .in_B( mul_result[0][(pFP_WIDTH-1):0] )                 , .clk( clk ) , .rst_n( rst_n )  , .in_valid( mul_out_valid[0] )  , .result( cmul_result[0][(pFP_WIDTH-1):0] )             , .out_valid( cmul_valid_o[0] ));
+fp_add   fp_add_02( .in_A( a_result ) , .in_B( mul_result[0][(pFP_WIDTH*2-1):(pFP_WIDTH)] )     , .clk( clk ) , .rst_n( rst_n )  , .in_valid( mul_out_valid[1] )  , .result( cmul_result[0][(pFP_WIDTH*2-1):(pFP_WIDTH)] ) , .out_valid( cmul_valid_o[1] ));
+fp_add   fp_add_11( .in_A( a_result ) , .in_B( mul_result[1][(pFP_WIDTH-1):0] )                 , .clk( clk ) , .rst_n( rst_n )  , .in_valid( mul_out_valid[0] )  , .result( cmul_result[1][(pFP_WIDTH-1):0] )             , .out_valid( cmul_valid_o[0] ));
+fp_add   fp_add_12( .in_A( a_result ) , .in_B( mul_result[1][(pFP_WIDTH*2-1):(pFP_WIDTH)] )     , .clk( clk ) , .rst_n( rst_n )  , .in_valid( mul_out_valid[1] )  , .result( cmul_result[1][(pFP_WIDTH*2-1):(pFP_WIDTH)] ) , .out_valid( cmul_valid_o[1] ));
 
 mont_add mont_add_01(.in_A(mul_result[0][(pNTT_WTDTH-1):0])               , .in_B(a_result[(pNTT_WTDTH-1)  :0])             , .clk(clk), .rst_n(rst_n), .in_valid(mul_out_valid[0]), .result(mont_add_result[0][(pNTT_WTDTH-1)    :0])             , .out_valid(mont_add_valid_o0[0]));
 mont_add mont_add_02(.in_A(mul_result[0][(pNTT_WTDTH*2-1):(pNTT_WTDTH)])  , .in_B(a_result[(pNTT_WTDTH*2-1):(pNTT_WTDTH)])  , .clk(clk), .rst_n(rst_n), .in_valid(mul_out_valid[0]), .result(mont_add_result[0][(pNTT_WTDTH*2-1)  :(pNTT_WTDTH)])  , .out_valid(mont_add_valid_o0[1]));
@@ -116,8 +118,8 @@ mont_add mont_add_16(.in_A(mul_result[1][(pNTT_WTDTH*6-1):(5*pNTT_WTDTH)]), .in_
 mont_add mont_add_17(.in_A(mul_result[1][(pNTT_WTDTH*7-1):(6*pNTT_WTDTH)]), .in_B(a_result[(pNTT_WTDTH*7-1):(pNTT_WTDTH*6)]), .clk(clk), .rst_n(rst_n), .in_valid(mul_out_valid[1]), .result(mont_add_result[1][(pNTT_WTDTH*7-1)  :(pNTT_WTDTH*6)]), .out_valid(mont_add_valid_o1[6]));
 mont_add mont_add_18(.in_A(mul_result[1][(pNTT_WTDTH*8-1):(7*pNTT_WTDTH)]), .in_B(a_result[(pNTT_WTDTH*8-1):(pNTT_WTDTH*7)]), .clk(clk), .rst_n(rst_n), .in_valid(mul_out_valid[1]), .result(mont_add_result[1][(pNTT_WTDTH*8-1)  :(pNTT_WTDTH*7)]), .out_valid(mont_add_valid_o1[7]));
 
-assign ao = (mode == 1'b1)? mul_result[0] : mont_add_result[0];
-assign bo = (mode == 1'b1)? mul_result[1] : mont_add_result[1];
+assign ao = (mode == 1'b1)? cmul_result[0] : mont_add_result[0];
+assign bo = (mode == 1'b1)? cmul_result[1] : mont_add_result[1];
 assign o_vld = (mode == 1'b1)? mul_out_valid[0] & mul_out_valid[1] : mont_add_valid_o0[0] ;
     // complex mul & add & sub for FFT/iFFT
 
