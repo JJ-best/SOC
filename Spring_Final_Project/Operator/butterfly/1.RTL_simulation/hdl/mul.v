@@ -58,7 +58,7 @@ module mul #(
 ) (
     input [(pDATA_WIDTH-1) : 0]     in_A,
     input [(pDATA_WIDTH-1) : 0]     in_B,
-    input                           mode, // * set mode = 0 to do complex mul ， mode = 1 to do int mul
+    input [1:0]                     mode, 
     input                           clk ,
     input                           rst_n,
     input                           in_valid,
@@ -227,12 +227,17 @@ wire [(pNTT_WIDTH):0]               mont_cla_in[7:0];
 //======================================================================================================================//
 localparam C_MUL   = 1'b0;
 localparam INT_MUL = 1'b1;
+localparam mode_iNTT       = 2'b11;
+localparam mode_NTT        = 2'b10;
+localparam mode_iFFT       = 2'b01;
+localparam mode_FFT        = 2'b00;
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                              FSM                                                          //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-assign cmul_valid = (in_valid)?   ((mode == C_MUL)? 1'b1 : 1'b0 ) : 1'b0;
+assign cmul_valid = (in_valid)?   ((mode[1] == C_MUL)? 1'b1 : 1'b0 ) : 1'b0;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                     floating point adder lv1                                              //
@@ -307,9 +312,9 @@ assign b_im_r = b_im_reg[FP_ADD_LATENCY-1][(pFP_WIDTH-1)   : 0];
 
 
 
-assign array_in_valid[0]  = (mode == INT_MUL)? array_out_valid[1] : fp_add_ready[0]  ;
-assign array_in_valid[1]  = (mode == INT_MUL)? in_valid : fp_add_ready[1]  ;
-assign array_in_valid[2]  = (mode == INT_MUL)? in_valid : fp_add_ready[2]  ;
+assign array_in_valid[0]  = (mode[1] == INT_MUL)? array_out_valid[1] : fp_add_ready[0]  ;
+assign array_in_valid[1]  = (mode[1] == INT_MUL)? in_valid : fp_add_ready[1]  ;
+assign array_in_valid[2]  = (mode[1] == INT_MUL)? in_valid : fp_add_ready[2]  ;
 
 assign hidden_br_add_bi  = |(br_add_bi [(pFP_WIDTH-2) : pMANTISSA_WIDTH ]) ;
 assign hidden_a_im       = |(a_im_r    [(pFP_WIDTH-2) : pMANTISSA_WIDTH ]); 
@@ -324,17 +329,17 @@ assign array_in_ntt1     = {mul_16_result_b3[3][(pNTT_WIDTH-1):0] , mul_16_resul
 assign array_in_ntt2     = {mul_16_result_c3[3][(pNTT_WIDTH-1):0] , mul_16_result_c2[2][(pNTT_WIDTH-1):0] , mul_16_result_c1[1][(pNTT_WIDTH-1):0] , mul_16_result_c0[0][(pNTT_WIDTH-1):0]};
 
 assign array_in_A0       = {{(pFP_WIDTH - pMANTISSA_WIDTH -1 ){1'b0}} , hidden_br_add_bi , br_add_bi [(pMANTISSA_WIDTH-1):0]} ;
-assign array_in_A1       = (mode == INT_MUL )? array_in_ntt1 : {{(pFP_WIDTH - pMANTISSA_WIDTH -1 ){1'b0}} , hidden_a_im      , a_im_r    [(pMANTISSA_WIDTH-1):0]};
-assign array_in_A2       = (mode == INT_MUL )? array_in_ntt2 : {{(pFP_WIDTH - pMANTISSA_WIDTH -1 ){1'b0}} , hidden_a_im      , a_im_r    [(pMANTISSA_WIDTH-1):0]};
-assign array_in_B0       = (mode == C_MUL )? {{(pFP_WIDTH - pMANTISSA_WIDTH -1 ){1'b0}} , hidden_ar_sub_ai , ar_sub_ai [(pMANTISSA_WIDTH-1):0]} : in_A[(pFP_WIDTH-1):0];                
-assign array_in_B1       = (mode == C_MUL )? {{(pFP_WIDTH - pMANTISSA_WIDTH -1 ){1'b0}} , hidden_b_im      , b_im_r    [(pMANTISSA_WIDTH-1):0]} : in_B[(pFP_WIDTH-1):0];                   
-assign array_in_C0       = (mode == C_MUL )? {{(pFP_WIDTH - pMANTISSA_WIDTH -1 ){1'b0}} , hidden_br_sub_bi , br_sub_bi [(pMANTISSA_WIDTH-1):0]} : in_A[(pDATA_WIDTH-1):pFP_WIDTH];
-assign array_in_C1       = (mode == C_MUL )? {{(pFP_WIDTH - pMANTISSA_WIDTH -1 ){1'b0}} , hidden_a_re      , a_re_r    [(pMANTISSA_WIDTH-1):0]} : in_B[(pDATA_WIDTH-1):pFP_WIDTH];
+assign array_in_A1       = (mode[1] == INT_MUL )? array_in_ntt1 : {{(pFP_WIDTH - pMANTISSA_WIDTH -1 ){1'b0}} , hidden_a_im      , a_im_r    [(pMANTISSA_WIDTH-1):0]};
+assign array_in_A2       = (mode[1] == INT_MUL )? array_in_ntt2 : {{(pFP_WIDTH - pMANTISSA_WIDTH -1 ){1'b0}} , hidden_a_im      , a_im_r    [(pMANTISSA_WIDTH-1):0]};
+assign array_in_B0       = (mode[1] == C_MUL )? {{(pFP_WIDTH - pMANTISSA_WIDTH -1 ){1'b0}} , hidden_ar_sub_ai , ar_sub_ai [(pMANTISSA_WIDTH-1):0]} : in_A[(pFP_WIDTH-1):0];                
+assign array_in_B1       = (mode[1] == C_MUL )? {{(pFP_WIDTH - pMANTISSA_WIDTH -1 ){1'b0}} , hidden_b_im      , b_im_r    [(pMANTISSA_WIDTH-1):0]} : in_B[(pFP_WIDTH-1):0];                   
+assign array_in_C0       = (mode[1] == C_MUL )? {{(pFP_WIDTH - pMANTISSA_WIDTH -1 ){1'b0}} , hidden_br_sub_bi , br_sub_bi [(pMANTISSA_WIDTH-1):0]} : in_A[(pDATA_WIDTH-1):pFP_WIDTH];
+assign array_in_C1       = (mode[1] == C_MUL )? {{(pFP_WIDTH - pMANTISSA_WIDTH -1 ){1'b0}} , hidden_a_re      , a_re_r    [(pMANTISSA_WIDTH-1):0]} : in_B[(pDATA_WIDTH-1):pFP_WIDTH];
  
 
 mul16_array_ntt mul16_array_a(
     //-------- input of mul_16_array(64bit data width)
-    .in_A( array_in_A0 ),  .in_B0( array_in_A1 ),  .in_B1( array_in_A2 ),  .clk( clk ),  .rst_n( rst_n ),  .mode( mode ),  .in_valid( array_in_valid[0] ),  .out_valid( array_out_valid[0] ),
+    .in_A( array_in_A0 ),  .in_B0( array_in_A1 ),  .in_B1( array_in_A2 ),  .clk( clk ),  .rst_n( rst_n ),  .mode( mode[1] ),  .in_valid( array_in_valid[0] ),  .out_valid( array_out_valid[0] ),
     //-------- result from mul_16 ---------//
     .result_00( mul_16_result_a0[0] ) , .result_01( mul_16_result_a0[1] ) , .result_02( mul_16_result_a0[2] ) , .result_03( mul_16_result_a0[3] ), 
     .result_10( mul_16_result_a1[0] ) , .result_11( mul_16_result_a1[1] ) , .result_12( mul_16_result_a1[2] ) , .result_13( mul_16_result_a1[3] ),
@@ -422,9 +427,9 @@ assign exp_B1 = b_im_r    [(pMANTISSA_WIDTH + pEXP_WIDTH - 1) :pMANTISSA_WIDTH];
 assign exp_C0 = br_sub_bi [(pMANTISSA_WIDTH + pEXP_WIDTH - 1) :pMANTISSA_WIDTH];    // * exp of (b_re - b_im)
 assign exp_C1 = a_re_r    [(pMANTISSA_WIDTH + pEXP_WIDTH - 1) :pMANTISSA_WIDTH];    // * exp of a_re
 
-assign NaN_a  = (mode == C_MUL)?  ( (& exp_A0) & (|br_add_bi [(pMANTISSA_WIDTH-1):0]) ) | ( (& exp_A1) & (|a_im_r [(pMANTISSA_WIDTH-1):0]) ) : 1'b0;  // * if exp == 2047 and mantissa != 0 , assert NaN
-assign NaN_b  = (mode == C_MUL)?  ( (& exp_B0) & (|ar_sub_ai [(pMANTISSA_WIDTH-1):0]) ) | ( (& exp_B1) & (|b_im_r [(pMANTISSA_WIDTH-1):0]) ) : 1'b0;  // * if exp == 2047 and mantissa != 0 , assert NaN
-assign NaN_c  = (mode == C_MUL)?  ( (& exp_C0) & (|br_sub_bi [(pMANTISSA_WIDTH-1):0]) ) | ( (& exp_C1) & (|a_re_r [(pMANTISSA_WIDTH-1):0]) ) : 1'b0;  // * if exp == 2047 and mantissa != 0 , assert NaN
+assign NaN_a  = (mode[1] == C_MUL)?  ( (& exp_A0) & (|br_add_bi [(pMANTISSA_WIDTH-1):0]) ) | ( (& exp_A1) & (|a_im_r [(pMANTISSA_WIDTH-1):0]) ) : 1'b0;  // * if exp == 2047 and mantissa != 0 , assert NaN
+assign NaN_b  = (mode[1] == C_MUL)?  ( (& exp_B0) & (|ar_sub_ai [(pMANTISSA_WIDTH-1):0]) ) | ( (& exp_B1) & (|b_im_r [(pMANTISSA_WIDTH-1):0]) ) : 1'b0;  // * if exp == 2047 and mantissa != 0 , assert NaN
+assign NaN_c  = (mode[1] == C_MUL)?  ( (& exp_C0) & (|br_sub_bi [(pMANTISSA_WIDTH-1):0]) ) | ( (& exp_C1) & (|a_re_r [(pMANTISSA_WIDTH-1):0]) ) : 1'b0;  // * if exp == 2047 and mantissa != 0 , assert NaN
 
 fmul_exp  exponent_op_A( .clk( clk ) , .rst_n( rst_n ), .in_valid( fp_add_ready[0] ), .exp_A( exp_A0 ), .exp_B( exp_A1 ),  .exp_o( exp_A_out ), .out_inf( inf_A ) , .out_valid( exp_ready_A ));
 fmul_exp  exponent_op_B( .clk( clk ) , .rst_n( rst_n ), .in_valid( fp_add_ready[1] ), .exp_A( exp_B0 ), .exp_B( exp_B1 ),  .exp_o( exp_B_out ), .out_inf( inf_B ) , .out_valid( exp_ready_B ));
@@ -550,7 +555,7 @@ assign result_int8 = (mont_n_result[7][(pNTT_WIDTH)] == 1'b0)? mont_n_result[7][
 
 assign result_c     = { y_re , y_im} ; 
 assign result_int   = {result_int8, result_int7, result_int6, result_int5, result_int4, result_int3, result_int2, result_int1};
-assign out_valid    = (mode == C_MUL)?   (cmul_im_ready & cmul_re_ready) : (mont_n_valid[0]);
+assign out_valid    = (mode[1] == C_MUL)?   (cmul_im_ready & cmul_re_ready) : (mont_n_valid[0]);
 
 
 endmodule

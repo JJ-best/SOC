@@ -327,15 +327,16 @@ butterfly BUTTERFLY_DUT(
         input   [31:0]  fft_slave_latency ;
         input   [31:0]  fft_ocnt;
         begin
-            out_ready <= 0;
-            for (out_k=0 ; out_k < fft_slave_latency ; out_k = out_k+1)begin
-                @(posedge clk);
-            end
+            out_ready <= 1;
+
+            // for (out_k=0 ; out_k < fft_slave_latency ; out_k = out_k+1)begin
+            //     @(posedge clk);
+            // end
             @(posedge clk);
             out_ready <= 1;
-            @(posedge clk);
-            while (!out_valid) @(posedge clk);
-            out_ready <= 0;   
+            //@(posedge clk);
+            while (!(out_valid && out_ready)) @(posedge clk);
+            out_ready <= 1;   
             if( (A_out !== fft_answer_a) ||(B_out !== fft_answer_b) )begin
                 $display("[ERROR] [FFT_Pattern %d] Golden A :  %h    , Your A :   %h" , fft_ocnt, fft_answer_a , A_out );
                 $display("[ERROR] [FFT_Pattern %d] Golden B :  %h    , Your B :   %h" , fft_ocnt, fft_answer_b , B_out );
@@ -345,6 +346,7 @@ butterfly BUTTERFLY_DUT(
                 $display("[PASS]  [FFT_Pattern %d] Golden A :  %h    , Your A :   %h" , fft_ocnt, fft_answer_a , A_out );
                 $display("[PASS]  [FFT_Pattern %d] Golden B :  %h    , Your B :   %h" , fft_ocnt, fft_answer_b , B_out );
             end
+            out_ready <= 0;  
         end
     endtask
 
@@ -389,15 +391,15 @@ butterfly BUTTERFLY_DUT(
         input   [31:0]  ntt_slave_latency ;
         input   [31:0]  ntt_ocnt;
         begin
-            out_ready <= 0;
-            for (out_j=0 ; out_j < ntt_slave_latency ; out_j = out_j+1)begin
-                @(posedge clk);
-            end
+            out_ready <= 1;
+            // for (out_j=0 ; out_j < ntt_slave_latency ; out_j = out_j+1)begin
+            //     @(posedge clk);
+            // end
             @(posedge clk);
             out_ready <= 1;
-            @(posedge clk);
-            while (!out_valid) @(posedge clk);
-            out_ready <= 0;   
+            //@(posedge clk);
+            while (!(out_valid && out_ready)) @(posedge clk);
+            out_ready <= 1;   
             if( (A_out !== ntt_answer_a) ||(B_out !== ntt_answer_b) )begin
                 $display("[ERROR] [NTT_Pattern %d] Golden A :  %h  , Your A : %h " , ntt_ocnt, ntt_answer_a ,  A_out );
                 $display("[ERROR] [NTT_Pattern %d] Golden B :  %h  , Your B : %h " , ntt_ocnt, ntt_answer_b ,  B_out );
@@ -407,6 +409,7 @@ butterfly BUTTERFLY_DUT(
                 $display("[PASS]  [NTT_Pattern %d] Golden A :  %h  , Your A : %h " , ntt_ocnt, ntt_answer_a  , A_out  );
                 $display("[PASS]  [NTT_Pattern %d] Golden B :  %h  , Your B : %h " , ntt_ocnt, ntt_answer_b  , B_out );
             end
+            out_ready <= 0;
         end
     endtask
 
