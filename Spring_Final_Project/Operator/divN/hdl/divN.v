@@ -3,7 +3,6 @@ module divN #(
     parameter pDATA_WIDTH = 128 
 ) (
     input [(pDATA_WIDTH-1) : 0]     in_A,
-    input [1:0]                     mode, 
     input                           clk ,
     input                           rst_n,
     input                           in_valid,
@@ -23,12 +22,7 @@ localparam pROUNDER_FRAC_WIDTH  = 106 ;
 localparam pROUNDER_EXP_WIDTH   = 13  ;
 //--------------------------------------- LATENCY OF STAGE -----------------------------------------------------------//
 
-localparam CMUL_LATENCY         = 22;  //
-localparam FP_ADD_LATENCY       = 5 ;  // * Latency of fp_add
 localparam MUL16_ARRAY_LATENCY  = 4 ;  // * Latency of mul_16 array
-localparam WALLACE_LATENCY      = 3 ;  // * Latency of wallace tree
-localparam EXP_OP_LATENCY       = 7 ;
-localparam ROUNDER_LATENCY      = 3 ;  // * Latency of rounder
 localparam MOD_LATENCY          = 9 ;  // * Latency of mod operation(NTT)
 localparam CLA_ADD_LATENCY       = 2 ;  // * Latency of CLA
 //--------------------------------------------------------------------------------------------------------------------//
@@ -92,12 +86,6 @@ wire [(pNTT_WIDTH-1):0]             result_int7;
 wire [(pNTT_WIDTH-1):0]             result_int8;
 wire [(pNTT_WIDTH):0]               mont_cla_in[7:0];
 //======================================================================================================================//
-localparam C_MUL   = 1'b0;
-localparam INT_MUL = 1'b1;
-localparam mode_iNTT       = 2'b11;
-localparam mode_NTT        = 2'b10;
-localparam mode_iFFT       = 2'b01;
-localparam mode_FFT        = 2'b00;
 
 
 
